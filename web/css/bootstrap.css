@@ -48,6 +48,11 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+@font-face {
+    font-family: "cyklop";
+    src: url(font/cyklop/cyklop-regular.otf)format("opentype");
+}
+
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
