@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>SP | About Us</title>
+  <title>SP | Blog</title>
   <!-- MDB icon
   <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon"> -->
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
   <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="../css/mdb.min.css">
   <!-- Your custom styles (optional) -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
@@ -37,29 +37,29 @@
       <!-- Links -->
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="../index.html">Home</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="about.html">About Us<span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="../about.html">About Us</a>
         </li>
   
         <!-- Dropdown -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tech Used</a>
           <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="techUsed/SolarPanel.html">Solar Panels</a>
-            <a class="dropdown-item" href="techUsed/micro.html">Computers & Microcontrollers</a>
-            <a class="dropdown-item" href="techUsed/RFID.html">RFID</a>
-            <a class="dropdown-item" href="techUsed/motors.html">Motors</a>
+            <a class="dropdown-item" href="../techUsed/SolarPanel.html">Solar Panels</a>
+            <a class="dropdown-item" href="../techUsed/microcontrollers.html">Computers & Microcontrollers</a>
+            <a class="dropdown-item" href="../techUsed/RFID.html">RFID</a>
+            <a class="dropdown-item" href="../techUsed/motors.html">Motors</a>
           </div>
         </li>
         <!-- Link -->
-        <li class="nav-item">
-          <a class="nav-link" href="blog/blog_01.html">Team Blog</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="blog_01.html">Team Blog<span class="sr-only">(current)</span></a>
         </li>
         <!-- Link -->
         <li class="nav-item">
-          <a class="nav-link" href="docs.html">Documents</a>
+          <a class="nav-link" href="../docs.html">Documents</a>
         </li>
   
       </ul>
@@ -90,45 +90,74 @@
   <main>
   
   <!--Main layout-->
-  <h1 style="margin-top: 20px;text-align: center;margin-bottom: 30px;">About Us</h1>
-
   <div class="container">
-    <div class="row">
-      <div class="col-sm">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h1 style="margin-top: 20px;margin-bottom: 25px;text-align: center;">Team Blog</h1>
+        <ul class="list-group">
 
-        <figure class="figure">
-          <img src="img/nateProfile.jpg" class="figure-img img-fluid z-depth-1"
-            alt="Nate Profile Picture" style="width: 450px;">
-        </figure>
-        <p>Name: Nate Durham</p>
-        <p>Roles: Main programmer, web design</p>
-        <p>E-mail: nd01679@georgiasouthern.edu</p>
-        
-      </div>
-      <div class="col-sm">
-        
-        <figure class="figure">
-          <img src="img/zach.jpg" class="figure-img img-fluid z-depth-1"
-            alt="Zach Profile Picture" style="width: 450px;">
-        </figure>
-        <p>Name: Zachary Bleam</p>
-        <p>Roles: Team leader</p>
-        <p>E-mail: zb00626@georgiasouthern.edu</p>
+          <li class="list-group-item">
+            <h3>Oct. 29, 2019</h3>
+            <ul>
+              <li>Started micocontroller design for locking mechanism</li>
+            </ul>
+          </li>
 
-      </div>
-      <div class="col-sm">
+          <li class="list-group-item">
+            <h3>Oct. 30, 2019</h3>
+            <ul>
+              <li>Began work on design model</li>
+              <li>RFID concept introduced for locking mechanism</li>
+            </ul>
+          </li>
 
-        <figure class="figure">
-          <img src="img/samuProfile.jpg" class="figure-img img-fluid z-depth-1"
-            alt="Samu Profile Picture" style="width: 450px;">
-        </figure>
-        <p>Name: Samu Tanaka Blitch</p>
-        <p>Roles: </p>
-        <p>E-mail: st03772@georgiasouthern.edu</p>
+          <li class="list-group-item">
+            <h3>Nov. 4, 2019</h3>
+            <ul>
+              <li>Google sites is considered for hosting the webpage project</li>
+            </ul>
+          </li>
 
+          <li class="list-group-item">
+            <h3>Nov. 5, 2019</h3>
+            <ul>
+              <li>Google Sites and Wix abandoned for hand-coded website</li>
+              <li>Equipment tested for functionality</li>
+              <ul>
+                <li>PV panel tested with MPPT (Maximum Power Point Tracking)</li>
+              </ul>
+              <li>Scooter measurements taken</li>
+              <li>Worked with IT Dept. to get required software installed on in-lab computers</li>
+              <li>Embed blog page implemented</li>
+              <ul>
+                <li>Sources Google Doc and outputs onto Blog Page of website</li>
+              </ul>
+              <li>Met with Professor Adel to discuss project</li>
+              <ul>
+                Mainly discussed batteries and charging
+              </ul>
+              <li>Zach is collecting circuit data on Simulink</li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
+
+  <div class="container">
+    <div class="row justify-content-center" style="margin-top: 50px;">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination pg-blue">
+          <li class="page-item"><a class="page-link" href="blog_01.html">1</a></li>
+          <li class="page-item"><a class="page-link" href="blog_02.html">2</a></li>
+          <li class="page-item"><a class="page-link" href="blog_03.html">3</a></li>
+          <li class="page-item"><a class="page-link" href="blog_04.html">4</a></li>
+          <li class="page-item"><a class="page-link" href="blog_02.html">Next</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  
 
   </main>
 
