@@ -16,71 +16,72 @@
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="bg">
 
   <header>
-
     <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light blue lighten-4">
-  
-    <!-- Navbar brand -->
-    <a class="navbar-brand" href="../index.html">GSU Solar</a>
-  
-    <!-- Collapse button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="basicExampleNav">
-  
-      <!-- Links -->
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="../index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../about.html">About Us</a>
-        </li>
-  
-        <!-- Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tech Used</a>
-          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item active" href="SolarPanel.html">Solar Panels<span class="sr-only">(current)</span></a>
-            <a class="dropdown-item" href="micro.html">Computers & Microcontrollers</a>
-            <a class="dropdown-item" href="RFID.html">RFID</a>
-            <a class="dropdown-item" href="motors.html">Motors</a>
-          </div>
-        </li>
-        <!-- Link -->
-        <li class="nav-item">
-          <a class="nav-link" href="../blog.html">Team Blog</a>
-        </li>
-        <!-- Link -->
-        <li class="nav-item">
-          <a class="nav-link" href="../docs.html">Documents</a>
-        </li>
-  
-      </ul>
-      <!-- Links -->
-  
-      <form class="form-inline">
-        <div class="md-form my-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        </div>
-      </form>
-    </div>
-    <!-- Collapsible content -->
-  
-  </nav>
-  <!--/.Navbar-->
-  
+    <nav class="navbar navbar-expand-lg navbar-light grey lighten-1">
+
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="index.html">SCS</a>
+
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About Us</a>
+          </li>
+
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Tech Used</a>
+            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item active" href="SolarPanel.html">Solar Panels<span class="sr-only">(current)</span></a>
+              <a class="dropdown-item" href="micro.html">Computers & Microcontrollers</a>
+              <a class="dropdown-item" href="RFID.html">RFID</a>
+              <a class="dropdown-item" href="motors.html">Motors</a>
+            </div>
+          </li>
+          <!-- Link -->
+          <li class="nav-item">
+            <a class="nav-link" href="../blog/blog_01.html">Team Blog</a>
+          </li>
+          <!-- Link -->
+          <li class="nav-item">
+            <a class="nav-link" href="../docs.html">Documents</a>
+          </li>
+
+        </ul>
+
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto nav-flelx-icons">
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light"
+              href="https://github.com/SolarChargingStation/solarchargingstation.github.io" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- Collapsible content -->
+    </nav>
+    <!--/.Navbar-->
   </header>
   <!--Main Navigation-->
-  
   <!--Main layout-->
-  <main>
+  <main class="text-light">
   
   <h1 style="margin-top: 20px;margin-bottom: 25px;text-align: center;">Tech Used: Solar Panels</h1>
 
@@ -88,7 +89,7 @@
           <div class="row">
               <div class="col-sm-6">
                   <figure class="figure">
-                      <img src="../img/solarPanelProfile.jpg" class="figure-img img-fluid z-depth-1" alt="Picture of Solar Panel" width="500px">
+                      <img src="../img/solarPanelProfile.jpg" class="figure-img img-fluid z-depth-1 rounded" alt="Picture of Solar Panel" width="500px">
                   </figure>
               </div>
               <div class="col-sm-6">
@@ -102,23 +103,53 @@
 
   </main>
 
-  <!--Footer-->
-  <footer>
-  
-  </footer>
-  <!--Footer-->
-
-
+  <!-- Footer -->
+  <footer class="page-footer font-small grey darken-3 pt-4">
+    <!-- Footer Links -->
+    <div class="container-fluid text-center footerColor">
+      <!-- Grid row -->
+      <div class="row justify-content-md-center">
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+          <!-- Content -->
+          <h5 class="text-uppercase">Contact Us:</h5>
+          <p>nd01679@georgiasouthern.edu<br>
+            706.612.0671</p>
+        </div><!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <!-- Grid column -->
+        <div class="col-md-6 mb-md-0 mb-3">
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a class="nav-link waves-effect waves-light"
+                href="https://github.com/SolarChargingStation/solarchargingstation.github.io" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div><!-- Grid column -->
+      </div><!-- Grid row -->
+    </div><!-- Footer Links -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 black subFooterColor">
+      Resources for website obtained from
+      <a href="https://mdbootstrap.com">mdbootstrap.com</a>
+    </div><!-- Copyright -->
+  </footer><!-- Footer -->
+  </body>
   <!-- jQuery -->
-  <script type="text/javascript" src="../js/jquery.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="../js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="../js/mdb.min.js"></script>
-  <!-- Your custom scripts (optional) -->
+  <script src="../js/jquery.min.js" type="text/javascript"></script> <!-- Bootstrap tooltips -->
+
+  <script src="../js/popper.min.js" type="text/javascript"></script> <!-- Bootstrap core JavaScript -->
+
+  <script src="../js/bootstrap.min.js" type="text/javascript"></script> <!-- MDB core JavaScript -->
+
+  <script src="../js/mdb.min.js" type="text/javascript"></script> <!-- Your custom scripts (optional) -->
+
   <script type="text/javascript"></script>
 
-</body>
+
+
 </html>
