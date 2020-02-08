@@ -41,3 +41,39 @@ body {
 main {
     flex:1 0 auto;
 }
+
+.active {
+  background: rgb(136, 133, 139);
+}
+
+.footerColor {
+  color: rgb(187, 187, 187);
+}
+.subFooterColor {
+  color: grey;
+}
+
+.list-group-item {
+  background: rgb(129, 128, 128);
+  opacity: 0.7;
+}
+
+.colorDocItem {
+  color: rgb(32, 32, 41);
+}
+
+.opNav {
+  opacity: 0.5;
+}
+
+.opImg {
+  opacity: 0.95;
+}
+
+.opBlog {
+  opacity: 0.85;
+}
+
+footer {
+  opacity: 0.75;
+}
