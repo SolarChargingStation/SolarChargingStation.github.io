@@ -66,6 +66,16 @@ main {
   opacity: 0.5;
 }
 
+.navbar {
+  opacity: 0.3;
+}
+
+.navbar a:hover {
+  background: grey;
+  color: white;
+  opacity: 1;
+}
+
 .opImg {
   opacity: 0.95;
 }
