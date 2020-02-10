@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,11 +17,12 @@
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body class="bg">
 
   <header>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light grey lighten-1">
+    <nav class="navbar navbar-expand-lg navbar-dark black">
 
       <!-- Navbar brand -->
       <a class="navbar-brand" href="index.html">SCS</a>
@@ -82,45 +84,66 @@
   <!--Main Navigation-->
   <!--Main layout-->
   <main class="text-light">
-  
-  <!--Main layout-->
-      <h1 style="margin-top: 20px;margin-bottom: 25px;text-align: center;">Tech Used: Computers & Microcontrollers</h1>
 
-      <div class="container">
-          <div class="row">
-              <div class="col-sm-6">
-                <figure class="figure">
-                <img src="../img/raspberryPi.png" class="figure-img img-fluid z-depth-1 rounded" style="width: 500px;margin-right: 25px;"></div>
-                </figure>
-              <div class="col-sm-6">
-                  <h5 class="mt-0 font-weight-bold">Raspberry Pi 3 Model B</h5>
-                  <p>This is the brain of the dock's functionality. It will be used for the following tasks:</p>
-                  <ul class="float-left">
-                      <li>Running python scripts for calculating the 2-axis rotation needed to point the solar panels at the sun.</li>
-                      <ul>
-                          <li>Library being used is <a href="https://pysolar.readthedocs.io/en/latest/" target="_blank">PySolar</a>, which finds the angles needed using calculations and won't require the internet.</li>
-                      </ul>
-                      <li>Communicating with any microcontrollers that are being used in the charging dock.</li>
-                  </ul>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-sm-6">
-                <figure class="figure">
-                <img src="../img/unoPinout.jpg" class="figure-img img-fluid z-depth-1 rounded" width="500px"></div>
-                </figure>
-              <div class="col-sm-6">
-                  <h5 class="mt-0 font-weight-bold">Arduino Uno</h5>
-                  <p>Up to 4 Arduino Unos may be used in this procedure:</p>
-                  <ul>
-                      <li>2 for rotating both axes the solar panel.</li>
-                      <li>Another for controlling the flow of current from the solar panels to the battery</li>
-                      <li>Another for each charging port, which at the moment is one.</li>
-                  </ul>
-              </div>
-          </div>
+    <!--Main layout-->
+    <h1 style="margin-top: 20px;margin-bottom: 25px;text-align: center;">Tech Used: Computers & Microcontrollers</h1>
+
+    <div class="container">
+
+      <!-- Item 1 -->
+      <div class="row">
+        <div class="col-sm-6">
+          <figure class="figure">
+            <img src="../img/raspberryPi.png" class="figure-img img-fluid z-depth-1 rounded"
+              style="width: 500px;margin-right: 25px;">
+        </div>
+        </figure>
+        <div class="col-sm-6">
+          <h5 class="mt-0 font-weight-bold">Raspberry Pi 3 Model B</h5>
+          <p>This is the brain of the dock's functionality. It will be used for the following tasks:</p>
+          <ul class="float-left">
+            <li>Running python scripts for calculating the 2-axis rotation needed to point the solar panels at the sun.
+            </li>
+            <ul>
+              <li>Library being used is <a href="https://pysolar.readthedocs.io/en/latest/" target="_blank">PySolar</a>,
+                which finds the angles needed using calculations and won't require the internet.</li>
+            </ul>
+            <li>Communicating with any microcontrollers that are being used in the charging dock.</li>
+          </ul>
+        </div>
       </div>
 
+      <!-- Item 2 -->
+      <div class="row">
+        <div class="col-sm-6">
+          <figure class="figure">
+            <img src="../img/unoPinout.jpg" class="figure-img img-fluid z-depth-1 rounded" width="500px">
+        </div>
+        </figure>
+        <div class="col-sm-6">
+          <h5 class="mt-0 font-weight-bold">Arduino Uno</h5>
+          <p>Up to Arduino Unos may be used in this procedure:</p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="row">
+        <div class="col-sm-6">
+          <figure class="figure">
+            <img src="../img/smc.jpg" class="figure-img img-fluid z-depth-1 rounded" alt="Picture of Linear Actuator"
+              width="500px">
+          </figure>
+        </div>
+        <div class="col-sm-6">
+          <h5 class="mt-0 font-weight-bold">High-Power Simple Motor Controller G2 18v15</h5>
+          <p><a href="https://www.servocity.com/high-power-simple-motor-controller-g2-18v15" target="_blank">Source</a>
+          </p>
+          <p>Motor controller for Linear Actuator</p>
+          <p>Will act as microcontroller in place of what was an Arduino Uno.</p>
+        </div>
+      </div>
+
+    </div>
   </main>
 
   <!-- Footer -->
@@ -158,17 +181,17 @@
       <a href="https://mdbootstrap.com">mdbootstrap.com</a>
     </div><!-- Copyright -->
   </footer><!-- Footer -->
-  </body>
-  <!-- jQuery -->
-  <script src="../js/jquery.min.js" type="text/javascript"></script> <!-- Bootstrap tooltips -->
+</body>
+<!-- jQuery -->
+<script src="../js/jquery.min.js" type="text/javascript"></script> <!-- Bootstrap tooltips -->
 
-  <script src="../js/popper.min.js" type="text/javascript"></script> <!-- Bootstrap core JavaScript -->
+<script src="../js/popper.min.js" type="text/javascript"></script> <!-- Bootstrap core JavaScript -->
 
-  <script src="../js/bootstrap.min.js" type="text/javascript"></script> <!-- MDB core JavaScript -->
+<script src="../js/bootstrap.min.js" type="text/javascript"></script> <!-- MDB core JavaScript -->
 
-  <script src="../js/mdb.min.js" type="text/javascript"></script> <!-- Your custom scripts (optional) -->
+<script src="../js/mdb.min.js" type="text/javascript"></script> <!-- Your custom scripts (optional) -->
 
-  <script type="text/javascript"></script>
+<script type="text/javascript"></script>
 
 
 
