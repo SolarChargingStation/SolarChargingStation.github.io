@@ -1,25 +1,6 @@
-Material Design for Bootstrap
-Version: MDB FREE 4.11.0
+Website and respective files for solar charging station.
 
-Documentation:
-https://mdbootstrap.com/
+This is meant to showcase the objectives, progress, and achievements of the Solar Charging Station project. Undertaken by three Electrical Engineering Undergrads doing this as part of Senior Project at Georgia Southern University.
 
-Getting started:
-https://mdbootstrap.com/docs/jquery/getting-started/download/
-
-Tutorials:
-MDB-Bootstrap: https://mdbootstrap.com/education/bootstrap/
-MDB-Wordpress: https://mdbootstrap.com/education/wordpress/
-
-Templates:
-https://mdbootstrap.com/templates/
-
-License:
-https://mdbootstrap.com/general/license/
-
-Support:
-https://mdbootstrap.com/forums/forum/support/
-
-Contact:
-office@mdbootstrap.com
-
+Most of the design components from this website obtained from mdbootstrap.com:
+Copyright (c) 2019 MDBootstrap.com
