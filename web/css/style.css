@@ -66,6 +66,10 @@ main {
   opacity: 0.5;
 }
 
+.marginBottom{
+  margin-bottom: 50px;
+}
+
 .navbar {
   opacity: 0.8;
   z-index: 1;
