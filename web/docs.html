@@ -26,49 +26,19 @@
     <nav class="navbar navbar-expand-lg navbar-dark black">
 
       <!-- Navbar brand -->
-      <a class="navbar-brand" href="index.html">SCS</a>
-
+      <a class="navbar-brand" href="/SolarChargingStation.github.io/web/index.html">SCS</a>
       <!-- Collapse button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
         aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <!-- Collapsible content -->
       <div class="collapse navbar-collapse" id="basicExampleNav">
-
         <!-- Links -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
-
-          <!-- Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Tech Used</a>
-            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="techUsed/SolarPanel.html">Solar Panels</a>
-              <a class="dropdown-item" href="techUsed/micro.html">Computers & Microcontrollers</a>
-              <a class="dropdown-item" href="techUsed/RFID.html">RFID</a>
-              <a class="dropdown-item" href="techUsed/motors.html">Motors</a>
-            </div>
-          </li>
-          <!-- Link -->
-          <li class="nav-item">
-            <a class="nav-link" href="blog/blog_oct.html">Team Blog</a>
-          </li>
-          <!-- Link -->
-          <li class="nav-item active">
-            <a class="nav-link" href="docs.html">Documents<span class="sr-only">(current)</span></a>
-          </li>
-
-        </ul>
-        <!-- Links -->
-
+        <div id="main-bar"></div>
+        <script src="/SolarChargingStation.github.io/web/js2/jquery.min.js"></script>
+        <script src="/SolarChargingStation.github.io/web/js2/bootstrap.min.js"></script>
+        <script src="/SolarChargingStation.github.io/web/nav-bar.js?id=blog" id="nav-bar"></script>
         <ul class="navbar-nav ml-auto nav-flelx-icons">
           <li class="nav-item">
             <a class="nav-link waves-effect waves-light"
@@ -78,16 +48,13 @@
           </li>
         </ul>
       </div>
-      <!-- Collapsible content -->
-
     </nav>
-    <!--/.Navbar-->
 
   </header>
   <!--Main Navigation-->
 
   <!--Main layout-->
-  <main class="text-light">
+  <main class="text-dark font-weight-bolder">
 
     <!--Main layout-->
     <h1 style="margin-top: 20px;margin-bottom: 25px;text-align: center;">Documents</h1>
@@ -100,44 +67,26 @@
           <h5 class="mt-0 text-center">Research Documents</h5>
           <ul class="list-group" style="margin-bottom: 20px;">
             <li class="list-group-item">
-              Several documents have been removed from website because copyrights
+              Some documents have been removed from website because I don't want to deal with legalities
             </li>
+            <a target="_blank" href="https://publications.anl.gov/anlpubs/2009/06/64621.pdf">                                                                                                         <li class="list-group-item colorDocItem">Advanced Battery Technology for Electric Two-Wheelers in the People's Republic of China</li></a>
+            <a target="_blank" href="https://www.jchps.com/specialissues/Special%20issue%2010/jchps%2045%20jcps%20004%20sivapragash%20235-237.pdf">                                                   <li class="list-group-item colorDocItem">An innovative solar powered electric bicycle</li></a>
+            <a target="_blank" href="https://www.researchgate.net/publication/327048004_An_Overview_of_Existing_Experiences_with_Solar-Powered_E-Bikes/link/5b74e5ce299bf14c6da8b22f/download">       <li class="list-group-item colorDocItem">An Overview of Existing Experiences With Solar-Powered E-Bikes</li></a>
+            <a target="_blank" href="https://www.researchgate.net/publication/305683710_Design_and_Development_of_Solar_Hybrid_Bicycle">                                                              <li class="list-group-item colorDocItem">Design and Development of Solar Hybrid Bicycle</li></a>
+            <a target="_blank" href="https://www.researchgate.net/publication/317634804_Design_Construction_and_Performance_Study_of_a_Solar_Assisted_Tri-cycle">                                     <li class="list-group-item colorDocItem">Design, Construction and Performance Study of a Solar Assisted Try-cycle</li></a>
+            <a target="_blank" href="https://iopscience.iop.org/article/10.1088/1755-1315/70/1/012025">                                                                                               <li class="list-group-item colorDocItem">Development of a solar-powered bicycle in bike sharing transportation system</li></a>
+            <a target="_blank" href="https://www.irjet.net/archives/V6/i6/IRJET-V6I6742.pdf">                                                                                                         <li class="list-group-item colorDocItem">Design and Fabrication of Electric Scooter With Two Way Power Source</li></a>
+            <!-- <a target="_blank" href="documents/research/(Electric_Bicycles_evaluation)Project-bicycles.pdf">                                                                                  <li class="list-group-item">Electric Bicycles</li></a> -->
+            <a target="_blank" href="https://altaplanning.com/wp-content/uploads/Electric-Bicycle-Share-Feasibility-Study.pdf">                                                                       <li class="list-group-item colorDocItem">Electric Bicycle Share Feasibility Study</li></a>
+            <!-- <a target="_blank" href="documents/research/(Methods_of_charging_LiB)Electric Bicycle System.pdf">                                                                                <li class="list-group-item">Electric Bicycle System</li></a> -->
+            <a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/4147865">                                                                                                          <li class="list-group-item colorDocItem">Fabrication and Development of Hybrid Vehicle (scooter)</li></a>
+            <a target="_blank" href="https://www.mdpi.com/1996-1073/8/11/12368/pdf">                                                                                                                  <li class="list-group-item colorDocItem">Feasibility Study of a Solar-Powered Electric Vehicle Charging Station Model</li></a>
+            <a target="_blank" href="http://publications.lib.chalmers.se/records/fulltext/200760/200760.pdf">                                                                                         <li class="list-group-item colorDocItem">Solar Powered Bike Sharing System with Electric Bikes</li></a>
+            <a target="_blank" href="https://ieeexplore.ieee.org/document/8515312">                                                                                                                   <li class="list-group-item colorDocItem">Solar Powered E-Bike Charging Station with AC, DC, and Contactless Charging</li></a>
           </ul>
-          <!-- removed for fear of infringement
-                  <ul class="list-group" style="margin-bottom: 20px;">
-                      <a target="_blank" href="documents/research/(Lithium-ion_Batteries)64621.pdf">                                                    <li class="list-group-item">Advanced Battery Technology for Electric Two-Wheelers in the People's Republic of China</li></a>
-                      <a target="_blank" href="documents/research/(components)jchps 45 jcps 004 sivapragash 235-237.pdf">                               <li class="list-group-item">An innovative solar powered electric bicycle</li></a>
-                      <a target="_blank" href="documents/research/(transportation)energies-11-02129.pdf">                                               <li class="list-group-item">An Overview of Existing Experiences With Solar-Powered E-Bikes</li></a>
-                      <a target="_blank" href="documents/research/(hybrid_bicycles)Paper77377-381.pdf">                                                 <li class="list-group-item">Design and Development of Solar Hybrid Bicycle</li></a>
-                      <a target="_blank" href="documents/research/(solar_assisted_tricycle)PublishedManuscript.pdf">                                    <li class="list-group-item">Design, Construction and Performance Study of a Solar Assisted Try-cycle</li></a>
-                      <a target="_blank" href="documents/research/(Fuzzy-logic_Solar_Charging)Development_of_a_solar-powered_electric_bicycle_in.pdf">  <li class="list-group-item">Development of a solar-powered bicycle in bike sharing transportation system</li></a>
-                      <a target="_blank" href="/documents/research/(power)IRJET-V6I6742.pdf">                                                           <li class="list-group-item">Design and Fabrication of Electric Scooter With Two Way Power Source</li></a>
-                      <a target="_blank" href="documents/research/(Electric_Bicycles_evaluation)Project-bicycles.pdf">                                  <li class="list-group-item">Electric Bicycles</li></a>
-                      <a target="_blank" href="documents/research/(Planning)Electric-Bicycle-Share-Feasibility-Study.pdf">                              <li class="list-group-item">Electric Bicycle Share Feasibility Study</li></a>
-                      <a target="_blank" href="documents/research/(Methods_of_charging_LiB)Electric Bicycle System.pdf">                                <li class="list-group-item">Electric Bicycle System</li></a>
-                      <a target="_blank" href="documents/research/(hybrid_motors)NCAMES-147.pdf">                                                       <li class="list-group-item">Fabrication and Development of Hybrid Vehicle (scooter)</li></a>
-                      <a target="_blank" href="documents/research/(Eco)energies-08-12368.pdf">                                                          <li class="list-group-item">Feasibility Study of a Solar-Powered Electric Vehicle Charging Station Model</li></a>
-                      <a target="_blank" href="documents/research/(solar_charging_station).pdf">                                                        <li class="list-group-item">Solar Powered Bike Sharing System with Electric Bikes</li></a>
-                      <a target="_blank" href="documents/research/(solar_charging_station)zzz PID5417395 Good one.pdf">                                 <li class="list-group-item">Solar Powered E-Bike Charging Station with AC, DC, and Contactless Charging</li></a>
-                  </ul>
-                  -->
 
-          <!-- Data Sheets -->
-          <h5 class="mt-0 text-center">Data Sheets & Information</h5>
-          <ul class="list-group" style="margin-bottom: 20px;">
-            <a target="_blank" href="documents/dataSheets/arduinoUno.pdf">
-              <li class="list-group-item colorDocItem">Arduino Uno</li>
-            </a>
-            <a target="_blank" href="documents/dataSheets/arduinoMega_dataSheet.pdf">
-              <li class="list-group-item colorDocItem">Arduino Mega 2560</li>
-            </a>
-            <a target="_blank" href="https://www.servocity.com/hda12-50">
-              <li class="list-group-item colorDocItem">Linear Actuator</li>
-            </a>
-            <a target="_blank" href="documents/dataSheets/simple_motor_controller_g2.pdf">
-              <li class="list-group-item colorDocItem">Pololu Simple Motor Controller</li>
-            </a>
-          </ul>
+          
+
         </div>
 
         <!-- COLUMN 2 -->
@@ -179,6 +128,23 @@
             </a>
             <a target="_blank" href="documents/progressReports/progressReport_7.pdf">
               <li class="list-group-item colorDocItem">Progress Report 7</li>
+            </a>
+          </ul>
+
+          <!-- Data Sheets -->
+          <h5 class="mt-0 text-center">Data Sheets & Information</h5>
+          <ul class="list-group" style="margin-bottom: 20px;">
+            <a target="_blank" href="documents/dataSheets/arduinoUno.pdf">
+              <li class="list-group-item colorDocItem">Arduino Uno</li>
+            </a>
+            <a target="_blank" href="documents/dataSheets/arduinoMega_dataSheet.pdf">
+              <li class="list-group-item colorDocItem">Arduino Mega 2560</li>
+            </a>
+            <a target="_blank" href="https://www.servocity.com/hda12-50">
+              <li class="list-group-item colorDocItem">Linear Actuator</li>
+            </a>
+            <a target="_blank" href="documents/dataSheets/simple_motor_controller_g2.pdf">
+              <li class="list-group-item colorDocItem">Pololu Simple Motor Controller</li>
             </a>
           </ul>
 
