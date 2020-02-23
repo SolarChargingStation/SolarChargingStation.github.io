@@ -3,37 +3,37 @@ $(function () {
 bar += '<ul class="navbar-nav mr-auto">';
 // index.html
 bar += '<li id="index" class="nav-item">';
-bar += '<a class="nav-link" href="index.html">Home</a>';
+bar += '<a class="nav-link" href="/SolarChargingStation.github.io/web/index.html">Home</a>';
 bar += '</li>';
 // about.html
 bar += '<li id="about" class="nav-item">';
-bar += '<a class="nav-link" href="about.html">About Us</a>';
+bar += '<a class="nav-link" href="/SolarChargingStation.github.io/web/about.html">About Us</a>';
 bar += '</li>';
 //// dropdown (tech)
 bar += '<li class="nav-item dropdown">';
 bar += '<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tech Used</a>';
 bar += '<div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">';
 // SolarPanel.html
-bar += '<a id="SolarPanel" class="dropdown-item" href="techUsed/SolarPanel.html">Solar Panels</a>';
+bar += '<a id="SolarPanel" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/SolarPanel.html">Solar Panels</a>';
 // micro.html
-bar += '<a id="micro" class="dropdown-item" href="techUsed/micro.html">Computers & Microcontrollers</a>';
+bar += '<a id="micro" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/micro.html">Computers & Microcontrollers</a>';
 // RFID.html
-bar += '<a id="RFID" class="dropdown-item" href="techUsed/RFID.html">RFID</a>';
+bar += '<a id="RFID" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/RFID.html">RFID</a>';
 // motors.html
-bar += '<a id="motors" class="dropdown-item" href="techUsed/motors.html">Motors</a>';
+bar += '<a id="motors" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/motors.html">Motors</a>';
 bar += '</div>';
 bar += '</li>';
 bar += '<li class="nav-item">';
 // blog
-bar += '<a id="blog" class="nav-link" href="blog/blog_oct.html">Team Blog</a>';
+bar += '<a id="blog" class="nav-link" href="/SolarChargingStation.github.io/web/blog/blog_oct.html">Team Blog</a>';
 bar += '</li>';
 // docs.html
 bar += '<li class="nav-item">';
-bar += '<a id="docs" class="nav-link" href="docs.html">Documents</a>';
+bar += '<a id="docs" class="nav-link" href="/SolarChargingStation.github.io/web/docs.html">Documents</a>';
 bar += '</li>';
 // sources.html
 bar += '<li class="nav-item">';
-bar += '<a id="sources" class="nav-link" href="sources.html">Sources</a>';
+bar += '<a id="sources" class="nav-link" href="/SolarChargingStation.github.io/web/sources.html">Sources</a>';
 bar += '</li>';
 bar += '</ul>';
 //bar += '<ul class="navbar-nav ml-auto nav-flelx-icons"><li class="nav-item"><a class="nav-link waves-effect waves-light"href="https://github.com/SolarChargingStation/solarchargingstation.github.io" target="_blank"><i class="fab fa-github"></i></a></li></ul>';
