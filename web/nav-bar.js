@@ -27,9 +27,13 @@ bar += '<li class="nav-item">';
 // blog
 bar += '<a id="blog" class="nav-link" href="blog/blog_oct.html">Team Blog</a>';
 bar += '</li>';
-bar += '<li class="nav-item">';
 // docs.html
+bar += '<li class="nav-item">';
 bar += '<a id="docs" class="nav-link" href="docs.html">Documents</a>';
+bar += '</li>';
+// sources.html
+bar += '<li class="nav-item">';
+bar += '<a id="sources" class="nav-link" href="sources.html">Sources</a>';
 bar += '</li>';
 bar += '</ul>';
 //bar += '<ul class="navbar-nav ml-auto nav-flelx-icons"><li class="nav-item"><a class="nav-link waves-effect waves-light"href="https://github.com/SolarChargingStation/solarchargingstation.github.io" target="_blank"><i class="fab fa-github"></i></a></li></ul>';
