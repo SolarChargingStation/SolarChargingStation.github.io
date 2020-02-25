@@ -20,7 +20,7 @@
     font-style: normal;
 }
 .bg {
-    background-image: url(../img/solarPanelWall2.jpg);
+    background-image: url(../img/solarPanelWall_yellow.jpg);
     /* Full height */
     height: 100%;
 
@@ -54,12 +54,12 @@ main {
 }
 
 .list-group-item {
-  background: rgb(211, 211, 211);
+  background: rgb(141, 140, 77);
   opacity: 0.5;
 }
 
 .colorDocItem {
-  color: rgb(22, 56, 107);
+  color: rgb(56, 25, 13);
   opacity: 0.8;
 }
 
