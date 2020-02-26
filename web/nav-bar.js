@@ -13,14 +13,11 @@ bar += '</li>';
 bar += '<li class="nav-item dropdown">';
 bar += '<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tech Used</a>';
 bar += '<div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">';
-// SolarPanel.html
 bar += '<a id="SolarPanel" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/SolarPanel.html">Solar Panels</a>';
-// micro.html
 bar += '<a id="micro" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/micro.html">Computers & Microcontrollers</a>';
-// RFID.html
 bar += '<a id="RFID" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/RFID.html">RFID</a>';
-// motors.html
 bar += '<a id="motors" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/motors.html">Motors</a>';
+// \dropdown
 bar += '</div>';
 bar += '</li>';
 bar += '<li class="nav-item">';
