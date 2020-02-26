@@ -43,7 +43,7 @@ main {
 }
 
 .active {
-  background: rgb(136, 133, 139);
+  background: rgb(82, 71, 51);
 }
 
 .footerColor {
@@ -76,8 +76,16 @@ main {
   z-index: 1;
 }
 
+.nav-link {
+  color: #d6d0b9;
+}
+
 .dropdown-menu {
-  background: grey;
+  background: #2c2a24;
+  }
+
+.dropdown-item {
+  color: #dad4c1;
 }
 
 .navbar a:hover {
