@@ -20,7 +20,7 @@
     font-style: normal;
 }
 .bg {
-    background-image: url(../img/solarPanelWall2.jpg);
+    background-image: url(../img/solarPanelWall_yellow.jpg);
     /* Full height */
     height: 100%;
 
@@ -43,7 +43,7 @@ main {
 }
 
 .active {
-  background: rgb(136, 133, 139);
+  background: rgb(82, 71, 51);
 }
 
 .footerColor {
@@ -54,12 +54,12 @@ main {
 }
 
 .list-group-item {
-  background: rgb(211, 211, 211);
+  background: rgb(141, 140, 77);
   opacity: 0.5;
 }
 
 .colorDocItem {
-  color: rgb(22, 56, 107);
+  color: rgb(56, 25, 13);
   opacity: 0.8;
 }
 
@@ -76,8 +76,20 @@ main {
   z-index: 1;
 }
 
+.nav-link {
+  color: #d6d0b9;
+}
+
 .dropdown-menu {
-  background: grey;
+  background: #2c2a24;
+  }
+
+.navbar .dropdown-menu a:not(.active) {
+  color: #d6d1bc;
+}
+
+.dropdown-item {
+  color: #dad4c1;
 }
 
 .navbar a:hover {

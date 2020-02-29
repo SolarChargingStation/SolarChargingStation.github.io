@@ -20,7 +20,7 @@
   <style>
     .list-group-item {
       opacity: 0.75;
-      background: rgb(57, 55, 59);
+      background: rgb(39, 32, 20);
     }
 
     .noMargin {
@@ -80,12 +80,12 @@
           <button class="btn btn-dark dropdown-toggle mr-4 noMargin" type="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Month</button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="blog_oct.html">Oct</a>
-            <a class="dropdown-item" href="blog_nov.html">Nov</a>
-            <a class="dropdown-item" href="blog_dec.html">Dec</a>
-            <a class="dropdown-item" href="blog_jan.html">Jan</a>
-            <a class="dropdown-item active" href="blog_feb.html">Feb</a>
-            <a class="dropdown-item" href="blog_mar.html">Mar</a>
+            <li><a class="dropdown-item" href="blog_oct.html">Oct</a></li>
+            <li><a class="dropdown-item" href="blog_nov.html">Nov</a></li>
+            <li><a class="dropdown-item" href="blog_dec.html">Dec</a></li>
+            <li><a class="dropdown-item" href="blog_jan.html">Jan</a></li>
+            <li class="active"><a class="dropdown-item" href="blog_feb.html">Feb</a></li>
+            <li><a class="dropdown-item" href="blog_mar.html">Mar</a></li>
           </div>
           <!-- Choose month -->
 
@@ -157,6 +157,29 @@
                 <li>Tested DC motor for functionality</li>
                 <ul>
                   <li>Functional, not quite as powerful as we would like but we're still hopeful that it will work</li>
+                </ul>
+              </ul>
+            </li>
+
+            <li class="list-group-item">
+              <h3>Feb. 26, 2020</h3>
+              <ul>
+                <li>More testing and design planning</li>
+                <li>Acquired linear actuator for testing while we're waiting on the other one to arrive.</li>
+              </ul>
+            </li>
+
+            <li class="list-group-item">
+              <h3>Feb. 28, 2020</h3>
+              <ul>
+                <li>Confirmed functionality of linear actuator.</li>
+                <ul>
+                  <li>Contains built-in potentiomter which can be used with 5V reference to gather information on how much the actuator has extended/retracted.</li>
+                  <li>Made Arduino program to gather this information and mapped the values between 0-100.</li>
+                </ul>
+                <li>Experimented with H-bridge shield.</li>
+                <ul>
+                  <li>Found out how to send forward signal but not switched signal</li>
                 </ul>
               </ul>
             </li>
