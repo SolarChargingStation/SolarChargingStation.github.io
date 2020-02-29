@@ -33,16 +33,6 @@ bar += '<li class="nav-item">';
 bar += '<a id="sources" class="nav-link" href="/SolarChargingStation.github.io/web/sources.html">Sources</a>';
 bar += '</li>';
 bar += '</ul>';
-//bar += '<ul class="navbar-nav ml-auto nav-flelx-icons"><li class="nav-item"><a class="nav-link waves-effect waves-light"href="https://github.com/SolarChargingStation/solarchargingstation.github.io" target="_blank"><i class="fab fa-github"></i></a></li></ul>';
-// right side of nav
-//bar += '<ul class="navbar-nav ml-auto nav-flelx-icons">';
-//bar += '<li class="nav-item">';
-//bar += '<a class="nav-link waves-effect waves-light"';
-//bar += 'href="https://github.com/SolarChargingStation/solarchargingstation.github.io" target="_blank">';
-//bar += '<i class="fab fa-github"></i>';
-//bar += '</a>';
-//bar += '</li>';
-//bar += '</ul>';
 
   $("#main-bar").html(bar);
 
