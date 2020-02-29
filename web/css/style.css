@@ -46,6 +46,9 @@ main {
   background: rgb(82, 71, 51);
 }
 
+footer {
+  background-color: #292724;
+}
 .footerColor {
   color: rgb(187, 187, 187);
 }
