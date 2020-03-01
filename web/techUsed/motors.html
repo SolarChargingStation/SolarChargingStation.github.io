@@ -16,6 +16,12 @@
     <link rel="stylesheet" href="../css/mdb.min.css">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+      .row {
+        margin-bottom: 50px;
+      }
+    </style>
   </head>
 
   <body class="bg">
@@ -60,37 +66,43 @@
 
       <div class="container">
         
-        <!-- Item 1 -->
+        <!-- Item 1-1 -->
         <div class="row">
-          <div class="col-sm-6">
-            <figure class="figure">
-              <img src="../img/actuator.png" class="figure-img img-fluid z-depth-1 rounded"
-                alt="Picture of Linear Actuator" width="500px">
-            </figure>
+          <div class="col-sm-6">            
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Linear Actuator</h5>
+                <img src="../img/actuator.png" class="img-fluid rounded" width="500px"
+                alt="Picture of Linear Actuator">
+                <p class="card-text">Requires 12V DC input and uses feedback from built-in potentiometer to determine its position.</p>
+                <a class="card-link" href="https://www.servocity.com/hda12-50" target="_blank">Link to provider</a>
+              </div>
+            </div>
           </div>
           <div class="col-sm-6">
-            <h5 class="mt-0 font-weight-bold">Linear Actuator</h5>
-            <p><a href="https://www.servocity.com/hda12-50" target="_blank">Source</a></p>
-            <p>Requires 12V and uses PWM to control position.</p>
-            <p>Will be powered from battery, controlled by High-Power Simple Motor Controller G2 18v15, and used to control angle of solar panel to be
-              pointed at angle of sun.</p>
+            <h5>Choosing a Linear Actuator</h5>
+            <p>When choosing which linear actuator to use, it was more important to choose one with torque as opposed to speed. In the figure bottom, three actuators are compared. The actuators rated for the smaller load extended faster but couldn't produce as much force and were affected more by any increase in load.</p>
+            <p>The actuator we ended up choosing is represented in the bottom right of the figure. It responds very little to incraeses in load, extends very slowly, and provides plenty of the torque needed to do its job.</p>
+            <img src="../img/actuator-differences.png" class="figure-img img-fluid z-depth-1 rounded"
+                alt="Comparisons of Linear Actuators Load vs. Speed" width="400px">
           </div>
         </div>
 
         <!-- Item 2 -->
         <div class="row">
-          <div class="col-sm-6">
-            <figure class="figure">
-              <img src="../img/dcMotor.jpg" class="figure-img img-fluid z-depth-1 rounded"
-                alt="Picture of DC Motor" width="500px">
-            </figure>
+          <div class="col-sm-6">            
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">DC Motor</h5>
+                <img src="../img/dcMotor.jpg" class="img-fluid rounded" width="500px"
+                alt="Picture of DC Motor">
+                <p class="card-text">Requires 12V DC input and is a quarter-century old.</p>
+                <a class="card-link" href="https://www.servocity.com/hda12-50" target="_blank">Link to provider</a>
+              </div>
+            </div>
           </div>
           <div class="col-sm-6">
-            <h5 class="mt-0 font-weight-bold">DC Motor</h5>
-            <p>Provided by instructor.</p>
-            <p>Requires 12V and uses PWM to control speed of rotation.</p>
-            <p>Will be powered from battery, controlled by arduino, and used to control rotation of solar panel to be
-              pointed in direction of sun.</p>
+            <p>The current DC motor that we are working with was provided by the class professor and can optimistically control the horizontal rotation of the solarpanel to allow it to face the direction of the sun.</p>
           </div>
         </div>
 
