@@ -22,8 +22,11 @@
   .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #545023;
-}
+    background-color: #510023;
+  }
+  .row {
+    margin-bottom: 50px;
+  }
 </style>
 
 <body class="bg">
@@ -68,38 +71,80 @@
     <h1 style="margin-top: 20px;text-align: center;margin-bottom: 30px;">About Us</h1>
 
     <div class="container font-weight-bolder">
-      <div class="row">
-        <div class="col-sm">
 
+      <!-- Nate Durham -->
+      <div class="row justify-content-center">
+        <div class="col-6 col-md-4 text-center">
           <figure class="figure">
-            <img src="img/nateProfile.jpg" class="figure-img img-fluid z-depth-1 rounded opImg" alt="Nate Profile Picture"
-              style="width: 450px;">
+            <img src="img/nateProfile.jpg" class="figure-img img-fluid z-depth-1 rounded-circle" alt="Nate Profile Picture"
+              style="width: 200px;">
           </figure>
-          <p>Name: Nate Durham</p>
-          <p>Roles: Main programmer, web design</p>
-
         </div>
-        <div class="col-sm">
 
-          <figure class="figure">
-            <img src="img/zach.jpg" class="figure-img img-fluid z-depth-1 rounded opImg" alt="Zach Profile Picture"
-              style="width: 450px;">
-          </figure>
-          <p>Name: Zachary Bleam</p>
-          <p>Roles: Team leader</p>
-
-        </div>
-        <div class="col-sm">
-
-          <figure class="figure">
-            <img src="img/samuProfile.jpg" class="figure-img img-fluid z-depth-1 rounded opImg" alt="Samu Profile Picture"
-              style="width: 450px;">
-          </figure>
-          <p>Name: Samu Tanaka Blitch</p>
-          <p>Roles: Construction and structural design</p>
-
+        <div class="col-6 col-md-4">           
+          <table style="height: 90%;">
+            <tbody>
+              <tr>
+                <td class="align-middle">
+                  <p>Name: <br> Nate Durham</p>
+                  <p>Roles: <br> Programming, web design</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
         </div>
       </div>
+      
+      <!-- Zachary Bleam -->
+      <div class="row justify-content-center">
+        
+
+        <div class="col-5 col-md-2">           
+          <table style="height: 90%;">
+            <tbody>
+              <tr>
+                <td class="align-middle">
+                  <p>Name: <br> Zachary Bleam </p>
+                  <p>Roles: <br> Team leader</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>          
+        </div>
+
+        <div class="col-6 col-md-4 text-center">
+          <figure class="figure">
+            <img src="img/zach.jpg" class="figure-img img-fluid z-depth-1 rounded-circle" alt="Zach Profile Picture"
+              style="width: 200px;">
+          </figure>
+        </div>
+
+      </div>
+
+      <!-- Samu Tanaka Blitch -->
+      <div class="row justify-content-center">
+        <div class="col-6 col-md-4 text-center">
+          <figure class="figure">
+            <img src="img/samuProfile.jpg" class="figure-img img-fluid z-depth-1 rounded-circle" alt="Samu Profile Picture"
+              style="width: 200px;">
+          </figure>
+        </div>
+
+        <div class="col-6 col-md-4 ">
+          <table style="height: 90%;">
+            <tbody>
+              <tr>
+                <td class="align-middle">
+                  <p>Name: <br> Samu Tanaka Blitch</p>
+                  <p>Roles: <br> Construction and physical design</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
     </div>
 
   </main>
