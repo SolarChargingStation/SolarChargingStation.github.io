@@ -16,6 +16,14 @@
   <link rel="stylesheet" href="../css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .card {
+      width: 100%;
+      height: 100%
+    }
+  </style>
+
 </head>
 
 <body class="bg">
@@ -53,7 +61,7 @@
   </header>
   <!--Main Navigation-->
   <!--Main layout-->
-  <main class="text-dark">
+  <main class="text-dark marginBottom">
 
     <!--Main layout-->
     <h1 style="margin-top: 20px;margin-bottom: 25px;text-align: center;">Tech Used: Computers & Microcontrollers</h1>
@@ -61,54 +69,44 @@
     <div class="container">
 
       <!-- Item 1 -->
+      <!-- Item 1 -->
       <div class="row">
         <div class="col-sm-6">
-          <figure class="figure">
-            <img src="../img/raspberryPi.png" class="figure-img img-fluid z-depth-1 rounded"
-              style="width: 500px;margin-right: 25px;">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Raspberry Pi 3 Model B</h5>
+              <img src="../img/raspberryPi.png" class="img-fluid rounded" alt="Picture of Raspberry Pi" style="height: 250px;">
+              <p class="card-text">Essentially a phone-sized desktop computer that runs the Raspian distribution of
+                Linux. Can be used to send commands to Arduinos and other microcontrollers through serial input.</p>
+              <p class="card-text">This is the brain of the dock's functionality. It will be used for the following tasks:</p>
+              <ul class="card-text">
+                <li>Running python scripts for calculating the 2-axis rotation needed to point the solar panels at the
+                  sun.
+                </li>
+                <ul>
+                  <li>Library being used is <a href="https://pysolar.readthedocs.io/en/latest/"
+                      target="_blank">PySolar</a>,
+                    which finds the angles needed using calculations and won't require the internet.</li>
+                </ul>
+                <li>Communicating with any microcontrollers that are being used in the charging dock.</li>
+              </ul>
+              <p class="card-link" href="https://www.servocity.com/hda12-50" target="_blank">Provided</p>
+            </div>
+          </div>
         </div>
-        </figure>
         <div class="col-sm-6">
-          <h5 class="mt-0 font-weight-bold">Raspberry Pi 3 Model B</h5>
-          <p>This is the brain of the dock's functionality. It will be used for the following tasks:</p>
-          <ul class="float-left">
-            <li>Running python scripts for calculating the 2-axis rotation needed to point the solar panels at the sun.
-            </li>
-            <ul>
-              <li>Library being used is <a href="https://pysolar.readthedocs.io/en/latest/" target="_blank">PySolar</a>,
-                which finds the angles needed using calculations and won't require the internet.</li>
-            </ul>
-            <li>Communicating with any microcontrollers that are being used in the charging dock.</li>
-          </ul>
-        </div>
-      </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Arduino Uno</h5>
+              <img src="../img/unoPinout.jpg" class="img-fluid rounded" alt="Picture of Arduino Uno" style="height: 250px;">
+              <p class="card-text">Essentially a phone-sized desktop computer that runs the Raspian distribution of
+                Linux. Can be used to send commands to Arduinos and other microcontrollers through serial input.</p>
+              <p class="card-text">Will be used in conjunction with the Raspberry Pi to control the DC motor and linear actuator, which, in turn, will control the position and direction of the solar panel.</p>
+              <p class="card-link" href="https://www.servocity.com/hda12-50" target="_blank">Provided</p>
 
-      <!-- Item 2 -->
-      <div class="row">
-        <div class="col-sm-6">
-          <figure class="figure">
-            <img src="../img/unoPinout.jpg" class="figure-img img-fluid z-depth-1 rounded" width="500px">
-        </div>
-        </figure>
-        <div class="col-sm-6">
-          <h5 class="mt-0 font-weight-bold">Arduino Uno</h5>
-          <p>Will control DC motor that rotates the platform of the solar panel.</p>
-        </div>
-      </div>
+            </div>
 
-      <!-- Item 3 -->
-      <div class="row">
-        <div class="col-sm-6">
-          <figure class="figure">
-            <img src="../img/smc.jpg" class="figure-img img-fluid z-depth-1 rounded" alt="Picture of Linear Actuator"
-              width="500px">
-          </figure>
-        </div>
-        <div class="col-sm-6">
-          <h5 class="mt-0 font-weight-bold">High-Power Simple Motor Controller G2 18v15</h5>
-          <p><a href="https://www.servocity.com/high-power-simple-motor-controller-g2-18v15" target="_blank">Source</a>
-          </p>
-          <p>Motor controller for Linear Actuator that will control the angle at which the solar panel is pointed.</p>
+          </div>
         </div>
       </div>
 

@@ -20,7 +20,8 @@
     font-style: normal;
 }
 .bg {
-    background-image: url(../img/solarPanelWall_yellow.jpg);
+    /*background-image: url(../img/solarPanelWall2.jpg);*/
+    background: #def7ff;
     /* Full height */
     height: 100%;
 
@@ -62,7 +63,7 @@ footer {
 }
 
 .colorDocItem {
-  color: rgb(56, 25, 13);
+  color: rgb(7, 8, 32);
   opacity: 0.8;
 }
 

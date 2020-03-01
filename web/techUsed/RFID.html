@@ -53,32 +53,30 @@
   </header>
   <!--Main Navigation-->
 
-  <main class="text-dark">
+  <main class="text-dark marginBottom">
 
     <h1 style="margin-top: 20px;margin-bottom: 25px;text-align: center;">Tech Used: RFID</h1>
 
     <div class="container">
 
       <!-- Item 1 -->
-      <div class="row">
-        <div class="col-sm-6">
-          <figure class="figure">
-            <img src="../img/arduinoRFID.png" class="figure-img img-fluid z-depth-1 rounded"
+      <div class="row justify-content-center">
+        <div class="col-sm-6">            
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Arduino RFID Module</h5>
+              <img src="../img/arduinoRFID.png" class="img-fluid rounded"
               alt="Picture of Solar Panel" width="500px">
-            <figcaption class="figure-caption text-center"><a
-                href="https://randomnerdtutorials.com/security-access-using-mfrc522-rfid-reader-with-arduino/"
-                target="_blank">image source</a></figcaption>
-          </figure>
+              <p class="card-text">Scans RFID tags. Effective at 1cm.</p>
+              <p class="card-text">In this project, we are planning on implementing an optional locking mechanism that uses an RFID scanner
+                and servo motor to keep personal vehicles in place while they are being charged. Items containing RFID tags
+                are found everywhere and many student ID's come with these tags built in. They have lots of information in
+                them but the only thing that will be scannable is the tag's Serial Number, which is enough to act as a key
+                for a personal lock.
+              <p class="card-link align-text-bottom" href="https://www.servocity.com/hda12-50" target="_blank">Provided</p>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-6">
-          <h5 class="mt-0 font-weight-bold">Arduino RFID Module</h5>
-          <p>In this project, we are planning on implementing an optional locking mechanism that uses an RFID scanner
-            and servo motor to keep personal vehicles in place while they are being charged. Items containing RFID tags
-            are found everywhere and many student ID's come with these tags built in. They have lots of information in
-            them but the only thing that will be scannable is the tag's Serial Number, which is enough to act as a key
-            for a personal lock.
-        </div>
-      </div>
 
     </div>
   </main>
