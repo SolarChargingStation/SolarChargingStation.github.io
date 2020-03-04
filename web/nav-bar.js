@@ -17,21 +17,26 @@ bar += '<a id="SolarPanel" class="dropdown-item" href="/SolarChargingStation.git
 bar += '<a id="micro" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/micro.html">Computers & Microcontrollers</a>';
 bar += '<a id="RFID" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/RFID.html">RFID</a>';
 bar += '<a id="motors" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/motors.html">Motors</a>';
-// \dropdown
 bar += '</div>';
 bar += '</li>';
-bar += '<li class="nav-item">';
+// \dropdown
 // blog
+bar += '<li class="nav-item">';
 bar += '<a id="blog" class="nav-link" href="/SolarChargingStation.github.io/web/blog/blog_oct.html">Team Blog</a>';
 bar += '</li>';
 // docs.html
 bar += '<li class="nav-item">';
 bar += '<a id="docs" class="nav-link" href="/SolarChargingStation.github.io/web/docs.html">Documents</a>';
 bar += '</li>';
+// sustainability.html
+bar += '<li class="nav-item">';
+bar += '<a id="sustainability" class="nav-link" href="/SolarChargingStation.github.io/web/sustainability.html">Sustainability</a>';
+bar += '</li>';
 // sources.html
 bar += '<li class="nav-item">';
 bar += '<a id="sources" class="nav-link" href="/SolarChargingStation.github.io/web/sources.html">Sources</a>';
 bar += '</li>';
+// end of navbar
 bar += '</ul>';
 
   $("#main-bar").html(bar);

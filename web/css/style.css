@@ -45,10 +45,11 @@ main {
 
 .active {
   background: rgb(51, 60, 82);
+  border: 0.02px solid #88b0d2;
 }
 
 footer {
-  background-color: #292724;
+  background-color: #292724bd;
 }
 .footerColor {
   color: rgb(187, 187, 187);
@@ -65,10 +66,6 @@ footer {
 .colorDocItem {
   color: rgb(7, 8, 32);
   opacity: 0.8;
-}
-
-.opNav {
-  opacity: 0.5;
 }
 
 .marginBottom{
@@ -94,9 +91,9 @@ footer {
 
 .dropdown-item.active,
     .dropdown-item:active {
-      color: #2e2d29;
+      color: black;
       text-decoration: none;
-      background-color: #e5d9c1;
+      background-color: #def7ff;
     }
 
 .dropdown-item {
@@ -110,16 +107,4 @@ footer {
 }
 .nav-item {
   border: 0.02px solid #88b0d2;
-}
-
-.opImg {
-  opacity: 0.95;
-}
-
-.opBlog {
-  opacity: 0.85;
-}
-
-footer {
-  opacity: 0.75;
 }
