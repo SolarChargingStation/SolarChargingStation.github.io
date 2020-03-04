@@ -36,6 +36,7 @@ bar += '</li>';
 bar += '<li class="nav-item">';
 bar += '<a id="sources" class="nav-link" href="/SolarChargingStation.github.io/web/sources.html">Sources</a>';
 bar += '</li>';
+// end of navbar
 bar += '</ul>';
 
   $("#main-bar").html(bar);
