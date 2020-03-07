@@ -20,7 +20,10 @@
   <style>
     .card {
       width: 100%;
-      height: 100%
+      height: 100%;
+    }
+    .row {
+      margin-bottom: 25px;
     }
   </style>
 </head>
@@ -68,19 +71,22 @@
     <div class="container">
 
       <!-- Item 1-1 -->
-      <div class="row">
-        <div class="col-sm-6">
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-6" style="margin-bottom: 10px;">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Linear Actuator</h5>
-              <img src="../img/linearActuator.jpg" class="img-fluid rounded" width="500px" alt="Picture of Linear Actuator">
+              <img src="../img/linearActuator.jpg" class="img-fluid rounded" width="500px"
+                alt="Picture of Linear Actuator">
               <p class="card-text">Requires 12V DC input and uses feedback from built-in potentiometer to determine its
                 position.</p>
-                <a class="card-link" href="https://www.amazon.com/Zoom-Industrial-Linear-Actuator-Stroke/dp/B0713YWQQ4/ref=sr_1_5?keywords=linear%2Bactuator%2B12v%2B12%2Binch%2Bstroke%2Bfeedback&qid=1583521879&sr=8-5&th=1" target="_blank">Link to source</a>
+              <a class="card-link"
+                href="https://www.amazon.com/Zoom-Industrial-Linear-Actuator-Stroke/dp/B0713YWQQ4/ref=sr_1_5?keywords=linear%2Bactuator%2B12v%2B12%2Binch%2Bstroke%2Bfeedback&qid=1583521879&sr=8-5&th=1"
+                target="_blank">Link to source</a>
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-12 col-md-6" style="margin-bottom: 10px;">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">DC Motor</h5>
@@ -90,13 +96,34 @@
                 <li>No-load Speed: 7 rpm</li>
                 <li>Torque: 30Kg-cm(43.4lb.in)</li>
               </ul>
-              <a class="card-link" href="https://www.amazon.com/dp/B078J521TG/ref=twister_B07SZ8262D?_encoding=UTF8&psc=1" target="_blank">Link to Source</a>
+              <a class="card-link"
+                href="https://www.amazon.com/dp/B078J521TG/ref=twister_B07SZ8262D?_encoding=UTF8&psc=1"
+                target="_blank">Link to Source</a>
             </div>
           </div>
         </div>
       </div>
 
-    </div>
+      <h3 style="margin-top: 20px;margin-bottom: 25px;text-align: center;">Motor Driver</h3>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-6" style="margin-bottom: 10px;">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">DC Motor</h5>
+              <img src="../img/hBridge.jpeg" class="img-fluid rounded" width="500px"
+                alt="Picture of H-bridge Motor Shield">
+              <p class="card-text">Requires 12V DC input</p>
+              <ul class="card-text">
+                <li>Motor controller for both Linear Actuator and DC Motor</li>
+              </ul>
+              <a class="card-link" href="https://www.makerfabs.com/h-bridge-motor-shield.html" target="_blank">Link to
+                Source</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
 
   </main>
 
