@@ -16,6 +16,20 @@
   <link rel="stylesheet" href="../css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .card {
+      width: 100%;
+      height: 100%;
+    }
+    .row {
+      margin-bottom: 25px;
+    }
+    figure {
+      width: 100%;
+    }
+  </style>
+
 </head>
 
 <body class="bg">
@@ -65,8 +79,10 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Arduino RFID Module</h5>
+              <figure class="figure text-center">
               <img src="../img/arduinoRFID.png" class="img-fluid rounded"
-              alt="Picture of Solar Panel" width="500px">
+              alt="Picture of Solar Panel" style="height: 250px;">
+            </figure>
               <p class="card-text">Scans RFID tags. Effective at 10cm.</p>
               <p class="card-text">In this project, we are planning on implementing an optional locking mechanism that uses an RFID scanner
                 and servo motor to keep personal vehicles in place while they are being charged. Items containing RFID tags
