@@ -32,6 +32,10 @@ bar += '</li>';
 bar += '<li class="nav-item">';
 bar += '<a id="sustainability" class="nav-link" href="/SolarChargingStation.github.io/web/sustainability.html">Sustainability</a>';
 bar += '</li>';
+// operation.html
+bar += '<li class="nav-item">';
+bar += '<a id="operation" class="nav-link" href="/SolarChargingStation.github.io/web/operation.html">Operation</a>';
+bar += '</li>';
 // sources.html
 bar += '<li class="nav-item">';
 bar += '<a id="sources" class="nav-link" href="/SolarChargingStation.github.io/web/sources.html">Sources</a>';
