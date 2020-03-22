@@ -22,8 +22,13 @@
       width: 100%;
       height: 100%;
     }
+
     .row {
       margin-bottom: 25px;
+    }
+
+    figure {
+      width: 100%;
     }
   </style>
 </head>
@@ -76,12 +81,14 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Linear Actuator</h5>
-              <img src="../img/linearActuator.jpg" class="img-fluid rounded" width="500px"
-                alt="Picture of Linear Actuator">
+              <figure class="figure text-center">
+                <img src="../img/linearActuatorPololu.jpg" class="img-fluid rounded" style="height: 250px;"
+                  alt="Picture of Linear Actuator">
+              </figure>
               <p class="card-text">Requires 12V DC input and uses feedback from built-in potentiometer to determine its
                 position.</p>
               <a class="card-link"
-                href="https://www.amazon.com/Zoom-Industrial-Linear-Actuator-Stroke/dp/B0713YWQQ4/ref=sr_1_5?keywords=linear%2Bactuator%2B12v%2B12%2Binch%2Bstroke%2Bfeedback&qid=1583521879&sr=8-5&th=1"
+                href="https://www.pololu.com/product/2307"
                 target="_blank">Link to source</a>
             </div>
           </div>
@@ -90,7 +97,10 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">DC Motor</h5>
-              <img src="../img/dcMotor.jpg" class="img-fluid rounded" width="500px" alt="Picture of DC Motor">
+              <figure class="figure text-center">
+                <img src="../img/dcMotor.jpg" class="img-fluid rounded" style="height: 250px;"
+                  alt="Picture of DC Motor">
+              </figure>
               <p class="card-text">Requires 12V DC input</p>
               <ul class="card-text">
                 <li>No-load Speed: 7 rpm</li>
@@ -109,14 +119,16 @@
         <div class="col-sm-12 col-md-6" style="margin-bottom: 10px;">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">DC Motor</h5>
-              <img src="../img/hBridge.jpeg" class="img-fluid rounded" width="500px"
-                alt="Picture of H-bridge Motor Shield">
+              <h5 class="card-title">Dual H-bridge Motor Driver</h5>
+              <figure class="figure text-center">
+                <img src="../img/hBridgeDROK.jpg" class="img-fluid rounded" style="height: 250px;"
+                  alt="Picture of H-bridge Motor">
+              </figure>
               <p class="card-text">Requires 12V DC input</p>
               <ul class="card-text">
                 <li>Motor controller for both Linear Actuator and DC Motor</li>
               </ul>
-              <a class="card-link" href="https://www.makerfabs.com/h-bridge-motor-shield.html" target="_blank">Link to
+              <a class="card-link" href="https://www.amazon.com/DROK-Controller-Regulator-Industrial-Optocoupler/dp/B06XGD5SCB/ref=sr_1_2?dchild=1&keywords=h+bridge+motor+driver&qid=1584814530&sr=8-2" target="_blank">Link to
                 Source</a>
             </div>
           </div>
@@ -132,24 +144,23 @@
     <!-- Footer Links -->
     <div class="container-fluid text-center footerColor">
       <!-- Grid row -->
-      <div class="row justify-content-md-center">
+      <div class="row justify-content-center">
         <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
+        <div class="col-6 col-lg-4">
           <!-- Content -->
           <h5 class="text-uppercase">Contact Us:</h5>
-          <p>nd01679@georgiasouthern.edu<br>
-            706.612.0671</p>
+          <a href="nd01679@georgiasouthern.edu" target="_blank"><i class="far fa-envelope"></i> Email</a>
+          <p>Phone: 706.612.0671</p>
         </div><!-- Grid column -->
-        <hr class="clearfix w-100 d-md-none pb-3">
         <!-- Grid column -->
-        <div class="col-md-6 mb-md-0 mb-3">
+        <div class="col-6 col-lg-4">
           <!-- Links -->
           <h5 class="text-uppercase">Links</h5>
           <ul class="list-unstyled">
             <li>
               <a class="nav-link waves-effect waves-light"
                 href="https://github.com/SolarChargingStation/solarchargingstation.github.io" target="_blank">
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github"></i> Github
               </a>
             </li>
           </ul>
