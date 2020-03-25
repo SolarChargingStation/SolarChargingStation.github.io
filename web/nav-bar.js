@@ -9,16 +9,20 @@ bar += '</li>';
 bar += '<li id="about" class="nav-item">';
 bar += '<a class="nav-link" href="/SolarChargingStation.github.io/web/about.html">About Us</a>';
 bar += '</li>';
-//// dropdown (tech)
-bar += '<li class="nav-item dropdown">';
-bar += '<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tech Used</a>';
-bar += '<div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">';
-bar += '<a id="SolarPanel" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/SolarPanel.html">Solar Panels</a>';
-bar += '<a id="micro" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/micro.html">Computers & Microcontrollers</a>';
-bar += '<a id="RFID" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/RFID.html">RFID</a>';
-bar += '<a id="motors" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/motors.html">Motors</a>';
-bar += '</div>';
+// about.html
+bar += '<li id="techUsed" class="nav-item">';
+bar += '<a class="nav-link" href="/SolarChargingStation.github.io/web/techUsed.html">Tech Used</a>';
 bar += '</li>';
+//// dropdown (tech)
+//bar += '<li class="nav-item dropdown">';
+//bar += '<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tech Used</a>';
+//bar += '<div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">';
+//bar += '<a id="SolarPanel" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/SolarPanel.html">Solar Panels</a>';
+//bar += '<a id="micro" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/micro.html">Computers & Microcontrollers</a>';
+//bar += '<a id="RFID" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/RFID.html">RFID</a>';
+//bar += '<a id="motors" class="dropdown-item" href="/SolarChargingStation.github.io/web/techUsed/motors.html">Motors</a>';
+//bar += '</div>';
+//bar += '</li>';
 // \dropdown
 // blog
 bar += '<li class="nav-item">';
