@@ -73,13 +73,15 @@
   <!--Main Navigation-->
 
   <!--Main layout-->
-  <main class="text-dark bottom-margin">
-
+  <main class="text-light"
+    style="background-image: url(../img/solarPanelWall.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;border-top: 1px solid #bdd0de;">
     <!--Main layout-->
-    <div class="container">
+    <div class="container font-weight-bolder text-dark"
+      style="border: 1px solid antiquewhite;background: #2c3132;padding-top: 25px;margin-top: 2px;margin-bottom: 2px;">
       <div class="row justify-content-center">
         <div class="col-md-10">
-          <h1 class="text-dark" style="margin-top: 20px;margin-bottom: 25px;text-align: center;">Team Blog</h1>
+          <h1 class="text-light" style="margin-top: 20px;text-align: center;">Team Blog</h1>
+
 
           <!-- Choose month -->
           <button class="btn btn-dark dropdown-toggle mr-4 noMargin" type="button" data-toggle="dropdown"
@@ -94,7 +96,7 @@
           </div>
           <!-- Choose month -->
 
-          <ul class="list-group">
+          <ul class="list-group marginBottom">
 
             <!-- Blog dates -->
 
@@ -147,7 +149,8 @@
                 <li>We received the DC motor and Linear Actuator in the mail a few days ago</li>
                 <ul>
                   <li>The DC motor and its built-in encoder work well.</li>
-                  <li>The linear actuator was extending and retracting but the PWM position feedback wasn't working as expected.</li>
+                  <li>The linear actuator was extending and retracting but the PWM position feedback wasn't working as
+                    expected.</li>
                   <ul>
                     <li>Tried to fix it and now it doesn't work at all.</li>
                     <li>We will likely resort to using the linear actuator that was used for testing.</li>
@@ -166,13 +169,16 @@
             <li class="list-group-item">
               <h3>Mar. 25, 2020</h3>
               <ul>
-                <li>Due to COVID-19, project may not be fully assembled but several of the key parts of the project will be in working order.</li>
-                <img src="../img/dcEncoderTesting.jpg" width="300px;" class="img-fluid float-right">
+                <li>Due to COVID-19, project may not be fully assembled but several of the key parts of the project will
+                  be in working order.</li>
+                <img src="../img/dcEncoderTesting.jpg" width="300px;" class="img-fluid float-right rounded">
                 <li>Tested encoder and H-bridge with DC motor</li>
                 <ul>
                   <li>There are 11 encoder ticks with every turn of motor</li>
-                  <li>The motor itself has a turn ratio of 1:522, meaning that there are actually 522*11 encoder ticks per revolution of the shaft... 5742 ticks per revolution.</li>
-                  <li>Furthermore, this means that with a 1:5 gear ratio, there will be 28710 encoder ticks per 360 degrees of the platform's revolution</li>
+                  <li>The motor itself has a turn ratio of 1:522, meaning that there are actually 522*11 encoder ticks
+                    per revolution of the shaft... 5742 ticks per revolution.</li>
+                  <li>Furthermore, this means that with a 1:5 gear ratio, there will be 28710 encoder ticks per 360
+                    degrees of the platform's revolution</li>
                 </ul>
               </ul>
             </li>
