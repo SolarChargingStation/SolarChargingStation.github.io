@@ -14,17 +14,20 @@ void setup() {
 
 void loop() {
   // gather data
+  while(Serial.available()==0);
   opCode = Serial.parseFloat();
+  while(Serial.available()==0);
   azimuth = Serial.parseFloat();
+  while(Serial.available()==0);
   altitude = Serial.parseFloat();
   // return data
   Serial.print("opCode: ");
   Serial.println(opCode);
-  Serial.print("Azimuth:  ");
-  Serial.println(azimuth);
   Serial.print("Altitude:   ");
   Serial.println(altitude);
-
+  Serial.print("Azimuth:  ");
+  Serial.println(azimuth);
+  
   // 1100 - RESET
   if (opCode == 1100) {
     // RESET FUNCTION
