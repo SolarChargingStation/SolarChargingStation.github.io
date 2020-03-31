@@ -17,6 +17,13 @@ void loop() {
   opCode = Serial.parseFloat();
   azimuth = Serial.parseFloat();
   altitude = Serial.parseFloat();
+  // return data
+  Serial.print("opCode: ");
+  Serial.println(opCode);
+  Serial.print("Azimuth:  ");
+  Serial.println(azimuth);
+  Serial.print("Altitude:   ");
+  Serial.println(altitude);
 
   // 1100 - RESET
   if (opCode == 1100) {
