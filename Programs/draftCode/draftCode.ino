@@ -44,25 +44,29 @@ void loop() {
       CW();
     }
     //// LINEAR ACTUATOR
-    reading = analogRead(A0);
-    altitude = map(altitude, 0, 90, 60, 980);
-    time1 = millis();
-    while(reading < altitude) {
-      extend();
+    altitude = 90-altitude;
+    if (altitude <= 90 && altitude >= 0) {
       reading = analogRead(A0);
-      time2 = millis();
-      if(time2-time1 > 10000) {
+      altitude = map(altitude, 0, 90, 60, 980);
+      // has to be within range and has 10 seconds to be completed
+      time1 = millis();
+      while(reading < altitude) {
+        extend();
+        reading = analogRead(A0);
+        time2 = millis();
+        if(time2-time1 > 10000) {
         break;
       }
     }
-    while(reading > altitude) {
-      retract();
-      reading = analogRead(A0);
-      time2 = millis();
-      if(time2-time1 > 10000) {
-        break;
+      while(reading > altitude) {
+        retract();
+        reading = analogRead(A0);
+        time2 = millis();
+        if(time2-time1 > 10000) {
+          break;
+        }
       }
-    }
+    }    
   }
 }
 
