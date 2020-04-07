@@ -1,6 +1,5 @@
-volatile float encoderPos;
-float opCode,azimuth,altitude;
-int reading;
+volatile float encoderPos=0;
+int reading,opCode,azimuth,altitude;
 unsigned long time1,time2;
 
 void setup() {
@@ -8,65 +7,74 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(2), doEncoderA, RISING);
   pinMode(3, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(3), doEncoderB, RISING);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
 
   Serial.begin(9600);
+  Serial.setTimeout(2000);
 }
 
 void loop() {
   // gather data
-  while(Serial.available()==0);
-  opCode = Serial.parseFloat();
-  while(Serial.available()==0);
-  azimuth = Serial.parseFloat();
-  while(Serial.available()==0);
-  altitude = Serial.parseFloat();
-  // return data
-  Serial.print("opCode: ");
-  Serial.println(opCode);
-  Serial.print("Altitude:   ");
-  Serial.println(altitude);
-  Serial.print("Azimuth:  ");
-  Serial.println(azimuth);
-  
-  // 1100 - RESET
-  if (opCode == 1100) {
-    // RESET FUNCTION
-  }
-  
-  // 1200 - ADJUST
-  if (opCode == 1200) {
-    //// DC MOTOR
-    // reset encoderPos
-    encoderPos = 0;
-    // translate azimuth into encoder marks, 79.75 encoder signals per degree
-    azimuth = azimuth*79.75;
-    while (encoderPos < azimuth) {
-      CW();
-    }
-    //// LINEAR ACTUATOR
-    altitude = 90-altitude;
-    if (altitude <= 90 && altitude >= 0) {
-      reading = analogRead(A0);
-      altitude = map(altitude, 0, 90, 60, 980);
-      // has to be within range and has 10 seconds to be completed
-      time1 = millis();
-      while(reading < altitude) {
-        extend();
-        reading = analogRead(A0);
-        time2 = millis();
-        if(time2-time1 > 10000) {
-        break;
+  if (Serial.available() > 0) {
+    String opCodeStr = Serial.readStringUntil('\n');
+    opCode = opCodeStr.toInt();
+    
+    Serial.println(opCode);
+    delay(1000);
+    String azimuthStr = Serial.readStringUntil('\n');
+    azimuth = azimuthStr.toInt();
+    Serial.println(azimuth);    
+    delay(1000);
+    String altitudeStr = Serial.readStringUntil('\n');
+    altitude = altitudeStr.toInt();    
+    Serial.println(altitude);
+
+    if (opCode == 1100) {
+      while(encoderPos > 0) {
+        CW();
       }
+      stopAll();
     }
-      while(reading > altitude) {
-        retract();
+
+    if (opCode == 1200) {
+      //// DC MOTOR
+      // reset encoderPos
+      // translate azimuth into encoder marks, 79.75 encoder signals per degree
+      azimuth = azimuth*79.75;
+      while (encoderPos < azimuth) {
+        Serial.println("Adjusting azimuth");
+        CCW();
+      }
+      stopAll();
+      //// LINEAR ACTUATOR
+      // Fully retracted (60) points up, fully extended (980) points out
+      /*altitude = 90-altitude;
+      if (altitude <= 90 && altitude >= 0) {
         reading = analogRead(A0);
-        time2 = millis();
-        if(time2-time1 > 10000) {
+        altitude = map(altitude, 0, 90, 60, 980);
+        // has to be within range and has 10 seconds to be completed
+        time1 = millis();
+        while(reading < altitude) {
+          extend();
+          reading = analogRead(A0);
+          time2 = millis();
+          if(time2-time1 > 10000) {
           break;
         }
       }
-    }    
+        while(reading > altitude) {
+          retract();
+          reading = analogRead(A0);
+          time2 = millis();
+          if(time2-time1 > 10000) {
+            break;
+          }
+        }
+      }*/    
+    }
   }
 }
 
