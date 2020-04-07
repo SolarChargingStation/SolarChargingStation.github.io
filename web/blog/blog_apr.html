@@ -2,26 +2,43 @@
 <html lang="en">
 
 <head>
-  <script src="js/popper.min.js" type="text/javascript"></script> <!-- Bootstrap core JavaScript -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>SCS | Operation</title>
+  <title>SCS | Blog</title>
   <!-- MDB icon
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon"> -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon"> -->
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
   <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="../css/mdb.min.css">
   <!-- Your custom styles (optional) -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 
+  <style>
+    .list-group-item {
+      background: rgba(191, 214, 222, .5);
+      border: 1px solid rgb(28, 32, 33);
+      opacity: 1;
+    }
+
+    .noMargin {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .bottom-margin {
+      margin-bottom: 50px;
+    }
+  </style>
 </head>
 
 
+
 <body class="bg">
+
   <header>
 
     <!--Navbar-->
@@ -40,7 +57,7 @@
         <div id="main-bar"></div>
         <script src="/SolarChargingStation.github.io/web/js2/jquery.min.js"></script>
         <script src="/SolarChargingStation.github.io/web/js2/bootstrap.min.js"></script>
-        <script src="/SolarChargingStation.github.io/web/nav-bar.js?id=operation" id="nav-bar"></script>
+        <script src="/SolarChargingStation.github.io/web/nav-bar.js?id=blog" id="nav-bar"></script>
         <ul class="navbar-nav ml-auto nav-flelx-icons">
           <li class="nav-item">
             <a class="nav-link waves-effect waves-light"
@@ -53,21 +70,57 @@
     </nav>
 
   </header>
+  <!--Main Navigation-->
 
-  <main class="text-dark"
-    style="background-image: url(img/solarPanelWall.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;border-top: 1px solid #bdd0de;">
+  <!--Main layout-->
+  <main class="text-light"
+    style="background-image: url(../img/solarPanelWall.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;border-top: 1px solid #bdd0de;">
     <!--Main layout-->
-    <div class="container col-12 col-md-8 font-weight-bolder text-light"
+    <div class="container col-12 col-md-8 font-weight-bolder text-dark"
       style="border: 1px solid antiquewhite;background: #2c3132;padding-top: 25px;margin-top: 10px;margin-bottom: 10px;">
       <div class="row justify-content-center">
-        <div class="col-10">
-          <h1 style="margin-top: 25px;margin-bottom: 50px;text-align: center;">Operation of Solar Charging Station</h1>
-          <figure class="figure text-center">
-            <img src="img/generalFlowLight.png" class="img-fluid">
-          </figure>
+        <div class="col-md-10">
+          <h1 class="text-light" style="margin-top: 20px;text-align: center;">Team Blog</h1>
+
+
+          <!-- Choose month -->
+          <button class="btn btn-dark dropdown-toggle mr-4 noMargin" type="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Month</button>
+          <div class="dropdown-menu">
+            <li><a class="dropdown-item" href="blog_oct.html">Oct</a></li>
+            <li><a class="dropdown-item" href="blog_nov.html">Nov</a></li>
+            <li><a class="dropdown-item" href="blog_dec.html">Dec</a></li>
+            <li><a class="dropdown-item" href="blog_jan.html">Jan</a></li>
+            <li><a class="dropdown-item" href="blog_feb.html">Feb</a></li>
+            <li><a class="dropdown-item" href="blog_feb.html">Mar</a></li>
+            <li class="active"><a class="dropdown-item" href="blog_apr.html">Apr</a></li>
+          </div>
+          <!-- Choose month -->
+
+          <ul class="list-group marginBottom">
+
+            <!-- Blog dates -->
+
+            <li class="list-group-item">
+              <h3>Apr. 2, 2020</h3>
+              <ul>
+                <li>Obtained battery for project along with inverter</li>
+                <ul>
+                  <li>Battery is 12V and rated for 35AH</li>
+                  <li>Should be able to power the whole station by itself for about 5 days</li>
+                </ul>
+                <li>Continued painting the structure</li>
+                <li>Next step is building the platform on which the solar panel will sit</li>
+                <li>Website is nearing completion and 22 out of 60 pages of the final report have been completed</li>
+              </ul>
+            </li>
+
+          </ul>
+
         </div>
       </div>
     </div>
+
   </main>
 
   <!-- Footer -->
@@ -103,19 +156,17 @@
   </footer><!-- Footer -->
 
 
+  <!-- jQuery -->
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="../js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="../js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
 
 </body>
-<!-- jQuery -->
-<script src="js/jquery.min.js" type="text/javascript"></script> <!-- Bootstrap tooltips -->
-
-<script src="js/popper.min.js" type="text/javascript"></script> <!-- Bootstrap core JavaScript -->
-
-<script src="js/bootstrap.min.js" type="text/javascript"></script> <!-- MDB core JavaScript -->
-
-<script src="js/mdb.min.js" type="text/javascript"></script> <!-- Your custom scripts (optional) -->
-
-<script type="text/javascript"></script>
-
-
 
 </html>
