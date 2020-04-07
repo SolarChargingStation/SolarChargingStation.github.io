@@ -18,8 +18,9 @@ void setup() {
 void loop() {
   // gather data  
   String message(DEC);
+  Serial.println("<Arduino is ready>");
   while(Serial.available()==0);
-  message = Serial.readStringUntil("\r");
+  message = Serial.readString();
   Serial.println(message);
   String opCodeStr,azimuthStr,altitudeStr;
   opCodeStr = opCodeStr+message[0];
@@ -48,7 +49,7 @@ void loop() {
     // translate azimuth into encoder marks, 79.75 encoder signals per degree
     azimuth = azimuth*79.75;
     while (encoderPos < azimuth) {
-      Serial.println("Adjusting azimuth");
+      //Serial.println("Adjusting azimuth");
       CCW();
     }
     stopAll();

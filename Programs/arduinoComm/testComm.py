@@ -8,6 +8,7 @@ from pysolar.solar import *
 import datetime
 
 arduino = serial.Serial('/dev/ttyACM0', 9600)
+arduino.flushInput()
 date = datetime.datetime.now(datetime.timezone.utc)
 
 opCode = str(sys.argv[1])
@@ -27,6 +28,12 @@ print("opCode:",opCode)
 print("azimuth:",azimuth)
 print("altitude:",altitude)
 
-message = opCode+azimuth+altitude+"\r"
-print(message)
-arduino.write(message.encode())
+message = opCode+azimuth+altitude
+
+mes = True
+while(mes==True):
+  s = arduino.readline()
+  s = s.strip()
+  if (s.decode("utf-8") == "<Arduino is ready>"):
+    arduino.write(message.encode())
+    break
