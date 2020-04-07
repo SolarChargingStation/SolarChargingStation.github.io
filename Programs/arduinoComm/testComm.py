@@ -2,23 +2,38 @@
 # will be used in conjunction with pysolar to send results to Arduino to operate the rotation of motor
 
 import serial
+import sys
 import time
 from pysolar.solar import *
 import datetime
 
 arduino = serial.Serial('/dev/ttyACM0', 9600)
+arduino.flushInput()
 date = datetime.datetime.now(datetime.timezone.utc)
 
-opCode = 1200
+opCode = str(sys.argv[1])
+altitude = str(int(get_altitude(32.448, -81.780, date)))
+azimuth = str(int(get_azimuth(32.448, -81.780, date)))
 
-altitude = get_altitude(32.448, -81.780)
-azimuth = get_azimuth(32.448, -81.780)
+if (int(altitude) < 10):
+  altitude = ("00"+altitude)
+if (int(altitude)>10 and int(altitude)<100):
+  altitude = ("0"+altitude)
+if (int(azimuth) < 10):
+  azimuth = ("00"+azimuth)
+if (int(altitude)>10 and int(azimuth)<100):
+  azimuth = ("0"+azimuth)
 
-print(altitude)
-print(azimuth)
+print("opCode:",opCode)
+print("azimuth:",azimuth)
+print("altitude:",altitude)
 
-arduino.write(b'%d' %opCode)
-time.sleep(5)
-arduino.write(b'%d' %altitude)
-time.sleep(5)
-arduino.write(b'%d' %azimuth)
+message = opCode+azimuth+altitude
+
+mes = True
+while(mes==True):
+  s = arduino.readline()
+  s = s.strip()
+  if (s.decode("utf-8") == "<Arduino is ready>"):
+    arduino.write(message.encode())
+    break
