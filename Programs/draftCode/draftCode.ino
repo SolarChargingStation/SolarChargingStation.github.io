@@ -1,4 +1,4 @@
-volatile float encoderPos=0;
+volatile int encoderPos=0;
 int reading,opCode,azimuth,altitude;
 unsigned long time1,time2;
 
@@ -12,17 +12,19 @@ void setup() {
   pinMode(6, OUTPUT);
   pinMode(7, OUTPUT);
 
-  Serial.begin(9600);
+  Serial.begin(115200);
 }
 
 void loop() {
   // gather data  
   String message(DEC);
-  Serial.println("<Arduino is ready>");
-  while(Serial.available()==0);
+  //Serial.println("<Arduino is ready>");
+  while(Serial.available()==0) {
+    Serial.println("<Arduino is ready>");
+  }
   message = Serial.readString();
   Serial.println(message);
-  String opCodeStr,azimuthStr,altitudeStr;
+  String opCodeStr,azimuthStr,altitudeStr,encoderStr;
   opCodeStr = opCodeStr+message[0];
   opCodeStr = opCodeStr+message[1];
   opCodeStr = opCodeStr+message[2];
@@ -32,9 +34,18 @@ void loop() {
   altitudeStr = altitudeStr+message[6];
   altitudeStr = altitudeStr+message[7];
   altitudeStr = altitudeStr+message[8];
+  /*
+  encoderStr = encoderStr+message[9];
+  encoderStr = encoderStr+message[10];
+  encoderStr = encoderStr+message[11];
+  encoderStr = encoderStr+message[12];
+  encoderStr = encoderStr+message[13];
+  */
+  
   int opCode = opCodeStr.toInt();
   int azimuth = azimuthStr.toInt();
   int altitude = altitudeStr.toInt();
+  //encoderPos = encoderStr.toInt();
 
   if (opCode == 110) {
     while(encoderPos > 0) {
@@ -79,14 +90,21 @@ void loop() {
       }
     }*/    
   }
+  /*
+  delay(5000);
+  Serial.println("<Encoder is ready>");
+  delay(1000);
+  Serial.println(encoderPos);
+  */
+  delay(10000);
 }
 
 //////// FUNCTIONS ////////
 // ALL MOTORS
 void stopAll() {
-  digitalWrite(4, LOW);
-  digitalWrite(5, LOW);
-  digitalWrite(6, LOW);
+  digitalWrite(4, HIGH);
+  digitalWrite(5, HIGH);
+  digitalWrite(6, HIGH);
   digitalWrite(7, LOW);
   digitalWrite(8, LOW);
   digitalWrite(9, LOW);

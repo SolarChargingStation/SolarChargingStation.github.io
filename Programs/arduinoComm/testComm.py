@@ -7,13 +7,22 @@ import time
 from pysolar.solar import *
 import datetime
 
-arduino = serial.Serial('/dev/ttyACM0', 9600)
+arduino = serial.Serial('/dev/ttyACM0', 115200)
+File = open("encoderPos.txt","r")
 arduino.flushInput()
 date = datetime.datetime.now(datetime.timezone.utc)
 
 opCode = str(sys.argv[1])
 altitude = str(int(get_altitude(32.448, -81.780, date)))
-azimuth = str(int(get_azimuth(32.448, -81.780, date)))
+azimuth = int(get_azimuth(32.448, -81.780, date))
+if (int(azimuth) < 0):
+  azimuth += 360
+azimuth = str(azimuth)
+
+#encoderPos = File.read()
+#encoderPos = str(int(float(encoderPos)))
+#print("encoderPos:",encoderPos)
+
 
 if (int(altitude) < 10):
   altitude = ("00"+altitude)
@@ -23,17 +32,39 @@ if (int(azimuth) < 10):
   azimuth = ("00"+azimuth)
 if (int(altitude)>10 and int(azimuth)<100):
   azimuth = ("0"+azimuth)
+#if (int(encoderPos) < 10):
+#  encoderPos = "0000"+encoderPos
+#if (int(encoderPos) > 10 and int(encoderPos) < 100):
+#  encoderPos = "000"+encoderPos
+#if (int(encoderPos) > 100 and int(encoderPos) < 1000):
+#  encoderPos = "00"+encoderPos
+#if (int(encoderPos) > 1000 and int(encoderPos) < 10000):
+#  encoderPos = "0"+encoderPos
 
 print("opCode:",opCode)
 print("azimuth:",azimuth)
 print("altitude:",altitude)
+#print("encoderPos:",encoderPos)
 
-message = opCode+azimuth+altitude
+message = opCode+azimuth+altitude # +encoderPos
 
-mes = True
-while(mes==True):
+while(True):
   s = arduino.readline()
   s = s.strip()
   if (s.decode("utf-8") == "<Arduino is ready>"):
     arduino.write(message.encode())
     break
+
+
+#while(True):
+#  s = arduino.readline()
+#  s = s.strip()
+#  if (s.decode("utf-8") == "<Encoder is ready>"):
+#    print("encoder received")  
+#    s = arduino.readline()
+#    s = s.strip()
+#    encoderPos = s.decode("utf-8")
+#    break
+#
+#File = open("encoderPos.txt","w")
+#File.write(encoderPos)
