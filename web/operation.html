@@ -58,7 +58,7 @@
     style="background-image: url(img/solarPanelWall.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;border-top: 1px solid #bdd0de;">
     <!--Main layout-->
     <div class="container col-12 col-md-8 font-weight-bolder text-light"
-      style="border: 1px solid antiquewhite;background: #2c3132;padding-top: 25px;margin-top: 10px;margin-bottom: 10px;">
+      style="border: 1px solid antiquewhite;background: #2c3132;padding-top: 25px;margin-top: 10px;margin-bottom: 5px;">
       <div class="row justify-content-center">
         <div class="col-10">
           <h1 style="margin-top: 25px;margin-bottom: 50px;text-align: center;">Operation of Solar Charging Station</h1>
@@ -67,6 +67,79 @@
           </figure>
         </div>
       </div>
+    </div>
+    <div class="container col-12 col-md-8 font-weight-bolder text-light"
+      style="border: 1px solid antiquewhite;background: #2c3132;padding-top: 25px;margin-top: 5px;margin-bottom: 10px;">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <h3>Operation of Solar Panel Cont.</h3>
+          <p>The operation all starts from the Raspberry Pi. There it uses PySolar in a python script, which sends the
+            opCode, azimuth, and altitude, all as a string, to the Arduino device. The model of this arduino device is
+            irrelevent and may be an Uno or Mega 2560 depending on availability.</p>
+          <h4>Reset</h4>
+          <p>If the opCode sent is 110, the azimuth and altitude are arbitrary and the whole platform will rotate until
+            it is facing north. This will be indicated by a mechanical switch on the platform which will mark the start
+            position for the platform every morning when the sun rises.</p>
+          <h4>Otherwise...</h4>
+          <p>If the opCode is 120, the platform will rotate until the solar panel is facing the desired direction.</p>
+          <h4>Using Linear Actuator to Adjust Altitude</h4>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <figure class="figure" style="height: 20%;">
+            <img src="img/linearActuatorFree.gif" class="img-fluid" alt="Encoder Gif">
+            <a href="https://commons.wikimedia.org/wiki/File:Linear_actuator_basic.gif" target="_blank">
+              <figcaption class="figure-caption text-left">AleSpa / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)</figcaption>
+            </a>
+          </figure>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <p>In the linear actuator, there is a built in potentiometer whose resistance varies based on how far the arm
+            is extended. It is higher the farther it is extended. Using this information, the minimum and maximum angles
+            of usable altitude (0-90 degrees) are mapped to the minimum and maximum values of this potentiometer
+            (60-990)</p>
+          <h4>DC Motor and Encoder for Azimuth</h4>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 text-center">
+          <figure class="figure" style="height: 100%;">
+            <img src="img/encoderFree.gif" class="img-fluid" alt="Encoder Gif">
+            <a href="https://commons.wikimedia.org/wiki/File:Incremental_directional_encoder.gif" target="_blank">
+              <figcaption class="figure-caption text-left">Operation of Encoder <br> Sidehack at English Wikibooks /
+                Public domain</figcaption>
+            </a>
+          </figure>
+        </div>
+        <div class="col-12 col-md-6 text-center">
+          <figure class="figure" style="width: 50%;">
+            <img src="img/motorFree.gif" class="img-fluid" alt="Motor Gif">
+            <a href="https://commons.wikimedia.org/w/index.php?search=dc+motor&title=Special%3ASearch&go=Go&ns0=1&ns6=1&ns12=1&ns14=1&ns100=1&ns106=1#/media/File:Electric_motor.gif"
+              target="_blank">
+              <figcaption class="figure-caption text-left">DC Motor <br> Abnormaal / CCBY-SA
+                (https://creativecommons.org/licenses/by-sa/3.0/)</figcaption>
+            </a>
+          </figure>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <p>The DC motor being using has a built in encoder which increments itself whenever the motor rotates through
+            the use of interrupts. The encoder receives 11 signals per motor rotation and the motor has a rotation ratio
+            of 1:522, so the number of signals per rotation of the shaft is 11*522. Then the gears being used have a 5:1
+            ratio so the number of signals per rotation of the larger gear, which the platform is mounted to is
+            11*522*5, which results in 18710 signals per rotation of the platform.</p>
+          <p>As for the functionality of the encoder, the interrupt is set to trigger a function on the rising edge of
+            each channel. If a channel rises and the other channel hasn't yet, it increments one in that direction. If
+            the other has risen, it doesn't do anything. The same can be said for the other channel, this way the motor
+            can turn one way to increment the encoder count and can turn the other way to decrement the encoder count.
+          </p>
+        </div>
+      </div>
+    </div>
     </div>
   </main>
 
