@@ -57,142 +57,163 @@
   <main class="text-dark"
     style="background-image: url(img/solarPanelWall.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;border-top: 1px solid #bdd0de;">
 
-    <div class="container col-12 col-md-8 font-weight-bolder text-light"
-      style="border: 1px solid antiquewhite;background: #2c3132;padding-top: 25px;margin-top: 10px;margin-bottom: 10px;">
-      <h1 style="text-align: center;margin-bottom: 30px;">Sustainability</h1>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-4">
-          <figure class="figure float-left" style="width: 100%;">
-            <img src="img/sustainability.png" class="img-fluid" alt="Sustainability Venn Diagram">
-            <a href="https://commons.wikimedia.org/w/index.php?search=sustainability&title=Special%3ASearch&go=Go&ns0=1&ns6=1&ns12=1&ns14=1&ns100=1&ns106=1#/media/File:Nested_sustainability-v2.svg" target="_blank"><figcaption class="figure-caption">KTucker / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)</figcaption></a>
-          </figure>
-        </div>
-        <div class="col-12 col-md-8">
-          <p>To analyze the success of this project, its outcomes are analysed from the three main perspectives of
-            sustainability:</p>
-          <ul>
-            <li>Environmental</li>
-            <li>Economic</li>
-            <li>Social</li>
-          </ul>
+    <div class="container col-12 col-lg-11 justify-content-center p-0">
+      <div class="col-12">
+        <div class="row justify-content-center" style="padding: 0;">
+          <div class="col-md-4 col-lg-4 text-center d-none d-md-block"
+            style="background: #1a181b;margin-top: 10px;margin-bottom: 10px; padding-bottom: 10px;">
+            <figure class="figure float-left" style="width: 90;">
+              <img src="img/sustainability.png" class="img-fluid" alt="Sustainability Venn Diagram">
+              <a href="https://commons.wikimedia.org/w/index.php?search=sustainability&title=Special%3ASearch&go=Go&ns0=1&ns6=1&ns12=1&ns14=1&ns100=1&ns106=1#/media/File:Nested_sustainability-v2.svg"
+                target="_blank">
+                <figcaption class="figure-caption">KTucker / CC BY-SA
+                  (https://creativecommons.org/licenses/by-sa/3.0)</figcaption>
+              </a>
+            </figure>
+          </div>
+
+          <div class="container col-12 col-md-8 font-weight-bolder text-light"
+            style="border: 1px solid antiquewhite;background: #2c3132;padding-top: 25px;margin-top: 10px;margin-bottom: 10px;">
+            <h1 style="text-align: center;margin-bottom: 30px;">Sustainability</h1>
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-8">
+                <p>To analyze the success of this project, its outcomes are analysed from the three main perspectives of
+                  sustainability:</p>
+                <ul>
+                  <li>Environmental</li>
+                  <li>Economic</li>
+                  <li>Social</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Environmental Sustainability -->
+            <div class="row justify-content-center">
+
+              <div class="col-12">
+                <h3 style="margin-top: 20px;margin-bottom: 25px;text-align: center;">Environmental Sustainability</h3>
+              </div>
+
+              <div class="col-sm-12 col-md-6 border-right">
+                <h3 class="text-center">Pros</h3>
+                <ul>
+                  <li>Renewable energy source</li>
+                  <li>Mostly comprised of wood and reusable or recyclable parts</li>
+                  <li>No emissions</li>
+                </ul>
+              </div>
+
+              <div class="col-sm-12 col-md-6">
+                <h4 class="text-center">Cons</h4>
+                <ul>
+                  <li>Production of solar panels can produce environmentally harmful waste</li>
+                  <li>Can be expensive</li>
+                  <li>Similar to some batteries, can be envionmentally harmful if disposed of improperly</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Economic Sustainability -->
+            <div class="row justify-content-center">
+
+              <div class="col-12">
+                <h3 style="margin-top: 20px;margin-bottom: 25px;text-align: center;">Economic Sustainability</h3>
+              </div>
+              <!-- 1 of 2 -->
+              <div class="col-sm-12 col-lg-4 border-right">
+                <h4>Current Investment</h4>
+                <p>**These values have been rounded for convenience</p>
+                <table class="table table-sm text-light">
+                  <thead>
+                    <tr>
+                      <th scope="col">Item</th>
+                      <th scope="col">Cost</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Structure</th>
+                      <td>$120</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Solar Panel</th>
+                      <td>$170</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Raspberry Pi</th>
+                      <td>$40</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Arduino Uno</th>
+                      <td>$20</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Linear Actuator</th>
+                      <td>$80</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Actuator Mounts</th>
+                      <td>$40</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Total</th>
+                      <td>$470</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- 2 of 2 -->
+              <div class="col-sm-12 col-lg-8">
+                <h4>Estimates</h4>
+                <p>The current model relies on a single solar panel and will optimistically take about 16 years to pay
+                  itself
+                  off; however, if more panels are added, this time can be lessened.</p>
+                <figure class="figure">
+                  <img src="img/sustPlot.jpg" class="img-fluid" alt="Sustainability Venn Diagram" style="width: 100%;">
+                  <figcaption class="figure-caption">Time to Payoff vs. Number of Solar Panels Used</figcaption>
+                </figure>
+                <p>In the figure above is the expected trend for the time expected for a unit to pay itself off vs. the
+                  number
+                  of solar panels that can be used. Obviously, any more than two solar panels would be ridiculous for
+                  the size
+                  of one unit and with another panel would prompt an increase in required resources, but this gives a
+                  good
+                  idea of how certain components can affect the sustainability of the project.</p>
+
+              </div>
+            </div>
+
+            <!-- Social Sustainability -->
+            <div class="row justify-content-center">
+
+              <div class="col-12">
+                <h3 style="margin-top: 20px;margin-bottom: 25px;text-align: center;">Social Sustainability</h3>
+              </div>
+
+              <div class="col-12">
+                <h4>Public view of Solar Panels</h4>
+                <p>As far as the project in the eyes of the public, we are optimistic as to how we expect people to
+                  think of
+                  our project. Solar panels have a healthy reputation in society as a green source of energy.</p>
+                <h4>In Regards to Transportation</h4>
+                <p>With personal electric vehicles becoming more popular by the year, more people are beginning to
+                  invest in
+                  these modes of transportation. This end product of this project will be something that people can put
+                  in
+                  their home or it can be something that is rented out to various institutions so that people have
+                  somewhere
+                  to park there vehicle to charge. It is also hopeful that this will encourage more people to invest in
+                  green
+                  transportation.</p>
+              </div>
+
+            </div>
+
+
+          </div>
         </div>
       </div>
-
-      <!-- Environmental Sustainability -->
-      <div class="row justify-content-center">
-
-        <div class="col-12">
-          <h3 style="margin-top: 20px;margin-bottom: 25px;text-align: center;">Environmental Sustainability</h3>
-        </div>
-
-        <div class="col-sm-12 col-md-6 border-right">
-          <h3 class="text-center">Pros</h3>
-          <ul>
-            <li>Renewable energy source</li>
-            <li>Mostly comprised of wood and reusable or recyclable parts</li>
-            <li>No emissions</li>
-          </ul>
-        </div>
-
-        <div class="col-sm-12 col-md-6">
-          <h4 class="text-center">Cons</h4>
-          <ul>
-            <li>Production of solar panels can produce environmentally harmful waste</li>
-            <li>Can be expensive</li>
-            <li>Similar to some batteries, can be envionmentally harmful if disposed of improperly</li>
-          </ul>
-        </div>
-
-      </div>
-
-      <!-- Economic Sustainability -->
-      <div class="row justify-content-center">
-
-        <div class="col-12">
-          <h3 style="margin-top: 20px;margin-bottom: 25px;text-align: center;">Economic Sustainability</h3>
-        </div>
-        <!-- 1 of 2 -->
-        <div class="col-sm-12 col-lg-4 border-right">
-          <h4>Current Investment</h4>
-          <p>**These values have been rounded for convenience</p>
-          <table class="table table-sm text-light">
-            <thead>
-              <tr>
-                <th scope="col">Item</th>
-                <th scope="col">Cost</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Structure</th>
-                <td>$120</td>
-              </tr>
-              <tr>
-                <th scope="row">Solar Panel</th>
-                <td>$170</td>
-              </tr>
-              <tr>
-                <th scope="row">Raspberry Pi</th>
-                <td>$40</td>
-              </tr>
-              <tr>
-                <th scope="row">Arduino Uno</th>
-                <td>$20</td>
-              </tr>
-              <tr>
-                <th scope="row">Linear Actuator</th>
-                <td>$80</td>
-              </tr>
-              <tr>
-                <th scope="row">Actuator Mounts</th>
-                <td>$40</td>
-              </tr>
-              <tr>
-                <th scope="row">Total</th>
-                <td>$470</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- 2 of 2 -->
-        <div class="col-sm-12 col-lg-8">
-          <h4>Estimates</h4>
-          <p>The current model relies on a single solar panel and will optimistically take about 16 years to pay itself
-            off; however, if more panels are added, this time can be lessened.</p>
-          <figure class="figure">
-            <img src="img/sustPlot.jpg" class="img-fluid" alt="Sustainability Venn Diagram" style="width: 100%;">
-            <figcaption class="figure-caption">Time to Payoff vs. Number of Solar Panels Used</figcaption>
-          </figure>
-          <p>In the figure above is the expected trend for the time expected for a unit to pay itself off vs. the number
-            of solar panels that can be used. Obviously, any more than two solar panels would be ridiculous for the size
-            of one unit and with another panel would prompt an increase in required resources, but this gives a good
-            idea of how certain components can affect the sustainability of the project.</p>
-
-        </div>
-      </div>
-
-      <!-- Social Sustainability -->
-      <div class="row justify-content-center">
-
-        <div class="col-12">
-          <h3 style="margin-top: 20px;margin-bottom: 25px;text-align: center;">Social Sustainability</h3>
-        </div>
-
-        <div class="col-12">
-          <h4>Public view of Solar Panels</h4>
-          <p>As far as the project in the eyes of the public, we are optimistic as to how we expect people to think of
-            our project. Solar panels have a healthy reputation in society as a green source of energy.</p>
-          <h4>In Regards to Transportation</h4>
-          <p>With personal electric vehicles becoming more popular by the year, more people are beginning to invest in
-            these modes of transportation. This end product of this project will be something that people can put in
-            their home or it can be something that is rented out to various institutions so that people have somewhere
-            to park there vehicle to charge. It is also hopeful that this will encourage more people to invest in green
-            transportation.</p>
-        </div>
-
-      </div>
-
-
     </div>
   </main>
 
@@ -206,7 +227,7 @@
         <div class="col-6 col-lg-4">
           <!-- Content -->
           <h5 class="text-uppercase">Contact Us:</h5>
-          <a href = "mailto:nd01679@georgiasouthern.edu?subject = Feedback&body = Message">Feedback (Email)</a>
+          <a href="mailto:nd01679@georgiasouthern.edu?subject = Feedback&body = Message">Feedback (Email)</a>
           </a>
           <p><i class="fas fa-mobile-alt"></i> 706.612.0671</p>
         </div><!-- Grid column -->
