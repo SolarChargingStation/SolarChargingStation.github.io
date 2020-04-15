@@ -34,18 +34,10 @@ void loop() {
   altitudeStr = altitudeStr+message[6];
   altitudeStr = altitudeStr+message[7];
   altitudeStr = altitudeStr+message[8];
-  /*
-  encoderStr = encoderStr+message[9];
-  encoderStr = encoderStr+message[10];
-  encoderStr = encoderStr+message[11];
-  encoderStr = encoderStr+message[12];
-  encoderStr = encoderStr+message[13];
-  */
   
   int opCode = opCodeStr.toInt();
   int azimuth = azimuthStr.toInt();
   int altitude = altitudeStr.toInt();
-  //encoderPos = encoderStr.toInt();
 
   if (opCode == 110) {
     while(encoderPos > 0) {
@@ -66,7 +58,7 @@ void loop() {
     stopAll();
     //// LINEAR ACTUATOR
     // Fully retracted (60) points up, fully extended (980) points out
-    /*altitude = 90-altitude;
+    altitude = 90-altitude;
     if (altitude <= 90 && altitude >= 0) {
       reading = analogRead(A0);
       altitude = map(altitude, 0, 90, 60, 980);
@@ -88,14 +80,9 @@ void loop() {
           break;
         }
       }
-    }*/    
+    }
   }
-  /*
-  delay(5000);
-  Serial.println("<Encoder is ready>");
-  delay(1000);
-  Serial.println(encoderPos);
-  */
+  
   delay(10000);
 }
 
