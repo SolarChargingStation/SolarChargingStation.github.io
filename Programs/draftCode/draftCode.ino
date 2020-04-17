@@ -11,6 +11,8 @@ void setup() {
   pinMode(5, OUTPUT);
   pinMode(6, OUTPUT);
   pinMode(7, OUTPUT);
+  pinMode(18, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(18), adjust, HIGH);
 
   Serial.begin(115200);
 }
@@ -130,4 +132,27 @@ void retract() {
   digitalWrite(9, LOW);
   digitalWrite(10, HIGH);
   analogWrite(11, 255);
+}
+// used to aim the platform North
+void adjust() {
+  // active for as long as switch is flipped
+  while(digitalRead(18) == HIGH) {
+    while(digitalRead(22) == HIGH) {
+      CW();
+    }
+    while(digitalRead(23) == HIGH) {
+      CCW();
+    }
+    // this is new north
+    if (digitalRead(24) == HIGH) {
+      encoderPos = 0;
+      azimuth = azimuth*79.75;
+      while (encoderPos < azimuth) {
+        //Serial.println("Adjusting azimuth");
+        CCW();
+        }
+      stopAll();
+      break;
+    }
+  }
 }
