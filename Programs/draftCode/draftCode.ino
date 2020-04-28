@@ -1,16 +1,32 @@
+int EncoderA = 2;
+int EncoderB = 3;
+int M1C1 = 4;
+int M1C2 = 5;
+int M1PWM = 6;
+int M1E = 7;
+int M2C1 = 8;
+int M2C2 = 9;
+int M2PWM = 10;
+int M2E = 11;
+int M2Pot = A0;
+
 volatile int encoderPos=0;
 int reading,opCode,azimuth,altitude;
 unsigned long time1,time2;
 
 void setup() {
-  pinMode(2, INPUT_PULLUP);
+  pinMode(EncoderA, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(2), doEncoderA, RISING);
-  pinMode(3, INPUT_PULLUP);
+  pinMode(EncoderB, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(3), doEncoderB, RISING);
-  pinMode(4, OUTPUT);
-  pinMode(5, OUTPUT);
-  pinMode(6, OUTPUT);
-  pinMode(7, OUTPUT);
+  pinMode(M1C1, OUTPUT);
+  pinMode(M1C2, OUTPUT);
+  pinMode(M1PWM, OUTPUT);
+  pinMode(M1E, OUTPUT);
+  pinMode(M2C1, OUTPUT);
+  pinMode(M2C2, OUTPUT);
+  pinMode(M2PWM, OUTPUT);
+  pinMode(M2E, OUTPUT);
   pinMode(18, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(18), adjust, HIGH);
 
@@ -27,13 +43,13 @@ void loop() {
   message = Serial.readString();
   Serial.println(message);
   String opCodeStr,azimuthStr,altitudeStr,encoderStr;
-  opCodeStr = opCodeStr+message[0];
+  opCodeStr = opCodeStr+message[0];       // opCode String
   opCodeStr = opCodeStr+message[1];
   opCodeStr = opCodeStr+message[2];
-  azimuthStr = azimuthStr+message[3];
+  azimuthStr = azimuthStr+message[3];     // azimuth String
   azimuthStr = azimuthStr+message[4];
   azimuthStr = azimuthStr+message[5];
-  altitudeStr = altitudeStr+message[6];
+  altitudeStr = altitudeStr+message[6];   // altitude String
   altitudeStr = altitudeStr+message[7];
   altitudeStr = altitudeStr+message[8];
   
@@ -62,13 +78,13 @@ void loop() {
     // Fully retracted (60) points up, fully extended (980) points out
     altitude = 90-altitude;
     if (altitude <= 90 && altitude >= 0) {
-      reading = analogRead(A0);
+      reading = analogRead(M2Pot);
       altitude = map(altitude, 0, 90, 60, 980);
       // has to be within range and has 10 seconds to be completed
       time1 = millis();
       while(reading < altitude) {
         extend();
-        reading = analogRead(A0);
+        reading = analogRead(M2Pot);
         time2 = millis();
         if(time2-time1 > 10000) {
         break;
@@ -76,7 +92,7 @@ void loop() {
     }
       while(reading > altitude) {
         retract();
-        reading = analogRead(A0);
+        reading = analogRead(M2Pot);
         time2 = millis();
         if(time2-time1 > 10000) {
           break;
@@ -91,47 +107,47 @@ void loop() {
 //////// FUNCTIONS ////////
 // ALL MOTORS
 void stopAll() {
-  digitalWrite(4, HIGH);
-  digitalWrite(5, HIGH);
-  digitalWrite(6, HIGH);
-  digitalWrite(7, LOW);
-  digitalWrite(8, LOW);
-  digitalWrite(9, LOW);
-  digitalWrite(10, LOW);
-  digitalWrite(11, LOW);
+  digitalWrite(M1C1, LOW);
+  digitalWrite(M1C2, LOW);
+  digitalWrite(M1PWM, LOW);
+  digitalWrite(M1E, LOW);
+  digitalWrite(M2C1, LOW);
+  digitalWrite(M2C2, LOW);
+  digitalWrite(M2PWM, LOW);
+  digitalWrite(M2E, LOW);
 }
 // M1 - ENCODER
 void doEncoderA() {  
-  encoderPos += (digitalRead(2)==digitalRead(3))?1:0;
+  encoderPos += (digitalRead(EncoderA)==digitalRead(EncoderB))?1:0;
 }
 void doEncoderB() {  
-  encoderPos += (digitalRead(2)==digitalRead(3))?-1:0;
+  encoderPos += (digitalRead(EncoderA)==digitalRead(EncoderB))?-1:0;
 }
 // M1 - DC MOTOR
 void CW() {
-  digitalWrite(4, HIGH);
-  digitalWrite(5, LOW);
-  digitalWrite(6, HIGH);
-  analogWrite(7, 255);
+  digitalWrite(M1C1, HIGH);
+  digitalWrite(M1C2, LOW);
+  digitalWrite(M1PWM, HIGH);
+  digitalWrite(M1E, HIGH);
 }
 void CCW() {
-  digitalWrite(4, LOW);
-  digitalWrite(5, HIGH);
-  digitalWrite(6, HIGH);
-  analogWrite(7, 255);
+  digitalWrite(M1C1, LOW);
+  digitalWrite(M1C2, HIGH);
+  digitalWrite(M1PWM, HIGH);
+  digitalWrite(M1E, HIGH);
 }
 // M2 - LINEAR ACTUATOR
 void extend() {
-  digitalWrite(8, LOW);
-  digitalWrite(9, HIGH);
-  digitalWrite(10, HIGH);
-  analogWrite(11, 255);
+  digitalWrite(M2C1, LOW);
+  digitalWrite(M2C2, HIGH);
+  digitalWrite(M2PWM, HIGH);
+  digitalWrite(M2E, HIGH);
 }
 void retract() {
-  digitalWrite(8, HIGH);
-  digitalWrite(9, LOW);
-  digitalWrite(10, HIGH);
-  analogWrite(11, 255);
+  digitalWrite(M2C1, HIGH);
+  digitalWrite(M2C2, LOW);
+  digitalWrite(M2PWM, HIGH);
+  digitalWrite(M2E, HIGH);
 }
 // used to aim the platform North
 void adjust() {
